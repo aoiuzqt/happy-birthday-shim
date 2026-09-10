@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Her — a little story</title>
+<meta name="description" content="A day worth remembering.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="gate-open">
+
+  <!-- ============ GATE / SONG INTRO ============ -->
+  <div id="gate">
+    <div class="gate-inner">
+      <h1 class="gate-heading">Before you<br><em>enter&hellip;</em></h1>
+      <p class="gate-sub">Choose the soundtrack for this little story.</p>
+
+      <ul class="songs" id="songList">
+        <li>
+          <button type="button" class="song" data-song="1" aria-pressed="true">
+            <span class="song-play" aria-hidden="true">&#9654;</span>
+            <span class="song-meta">
+              <span class="song-title">Song 01</span>
+              <span class="song-artist">Replace with your song</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="song" data-song="2" aria-pressed="false">
+            <span class="song-play" aria-hidden="true">&#9654;</span>
+            <span class="song-meta">
+              <span class="song-title">Song 02</span>
+              <span class="song-artist">Replace with your song</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+
+      <button type="button" class="enter-btn" id="enterBtn">Enter</button>
+      <p class="gate-hint" id="gateHint">a song is selected</p>
+    </div>
+  </div>
+
+  <!-- ============ MAIN SITE ============ -->
+  <main id="site">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <nav class="nav">
+        <span>17&mdash;08&mdash;2026</span>
+        <span>For Her</span>
+        <button type="button" id="musicToggle" aria-pressed="false">
+          <span aria-hidden="true">&#9835;</span> <span id="musicLabel">Music</span>
+        </button>
+      </nav>
+      <div class="wrap">
+        <div>
+          <p class="eyebrow hero-eyebrow">A day worth remembering</p>
+          <h1>For the girl<br>who makes<br><em>everything</em><br>look beautiful.</h1>
+        </div>
+        <label class="photo-slot hero-frame" data-slot>
+          <span class="slot-label">Add a photo of her</span>
+          <input type="file" accept="image/*">
+        </label>
+      </div>
+    </section>
+
+    <!-- A STUDY IN BEAUTY -->
+    <section class="beauty">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">A study in beauty</p>
+        <div class="beauty-grid" data-reveal>
+          <div>
+            <p class="eyebrow" style="margin-bottom:14px;">A little observation</p>
+            <h2 class="beauty-heading">YOUR<span class="flourish">Beauty</span></h2>
+          </div>
+          <div class="beauty-side">
+            <span class="mark" aria-hidden="true">&#10045;</span>
+            nothing here is accidental.<br>
+            every frame is a memory.
+          </div>
+        </div>
+        <p class="beauty-caption" data-reveal="fade">the way you make ordinary moments feel like art.</p>
+      </div>
+    </section>
+
+    <!-- YOUR SMILE -->
+    <section class="smile">
+
+    <label class="photo-slot smile-photo" data-slot data-reveal>
+        <span class="slot-label">Add a photo — her smile</span>
+        <input type="file" accept="image/*">
+    </label>
+
+    <div class="smile-copy" data-reveal>
+        <p class="eyebrow">A poem, maybe</p>
+
+        <h2>
+            There are sunsets<br>
+            that take minutes to paint.<br>
+            <em>And then there is your smile.</em>
+        </h2>
+
+        <p class="smile-note" contenteditable="true" spellcheck="false">
+            your poem goes here
+        </p>
+    </div>
+
+</section>
+
+    <!-- AN OBSERVATION -->
+    <section class="observation">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">An observation</p>
+        <h2 data-reveal>Some things<br>are better <em>felt.</em></h2>
+      </div>
+      <span class="mark" aria-hidden="true">&#10045;</span>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote">
+      <div class="wrap">
+        <blockquote data-reveal>I don&rsquo;t think you realize <em>how beautiful you are</em> when you&rsquo;re simply being yourself.</blockquote>
+      </div>
+    </section>
+
+    <!-- THE LITTLE THINGS -->
+    <section class="little-things">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">The little things</p>
+        <h2 data-reveal>Things I love<br><em>about you.</em></h2>
+        <div class="cards" data-reveal-group>
+          <article class="card">
+            <label class="photo-slot card-photo" data-slot>
+              <span class="slot-label">Photo</span>
+              <input type="file" accept="image/*">
+            </label>
+            <h3>01 &mdash; Your smile</h3>
+            <p>the kind that makes ordinary moments memorable.</p>
+          </article>
+          <article class="card">
+            <label class="photo-slot card-photo" data-slot>
+              <span class="slot-label">Photo</span>
+              <input type="file" accept="image/*">
+            </label>
+            <h3>02 &mdash; Your laugh</h3>
+            <p>the sound I wish I could bottle up.</p>
+          </article>
+          <article class="card">
+            <label class="photo-slot card-photo" data-slot>
+              <span class="slot-label">Photo</span>
+              <input type="file" accept="image/*">
+            </label>
+            <h3>03 &mdash; The little things</h3>
+            <p>especially the things you don&rsquo;t even notice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- A FEW FRAMES -->
+    <section class="frames">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">A few frames</p>
+        <h2 data-reveal>you, being <em>you.</em></h2>
+        <div class="collage">
+          <label class="photo-slot" data-slot>
+            <span class="slot-label">Photo</span>
+            <input type="file" accept="image/*">
+          </label>
+          <label class="photo-slot" data-slot>
+            <span class="slot-label">Photo</span>
+            <input type="file" accept="image/*">
+          </label>
+          <label class="photo-slot" data-slot>
+            <span class="slot-label">Photo</span>
+            <input type="file" accept="image/*">
+          </label>
+          <span class="collage-note n1">favorite.</span>
+          <span class="collage-note n2">look at you &hearts;</span>
+          <span class="collage-note n3">this one &gt;&gt;&gt;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESS PLAY -->
+    <section class="player">
+      <label class="photo-slot player-frame" data-slot>
+        <span class="slot-label">Photo</span>
+        <input type="file" accept="image/*">
+      </label>
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">A little something for you</p>
+        <h2 data-reveal>Press <em>play.</em></h2>
+        <button type="button" class="play-toggle" id="sectionPlay" aria-pressed="false" aria-label="Play song">
+          <span class="icon-play" aria-hidden="true">&#9654;</span>
+          <span class="icon-pause" aria-hidden="true">&#10073;&#10073;</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="letter">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">A letter for you</p>
+        <h2 data-reveal>Hey, you.</h2>
+        <div class="letter-body" data-reveal>
+          <p>I don&rsquo;t know if words will ever be enough to describe how special you are, but I wanted to try anyway.</p>
+          <p>Thank you for being exactly who you are &mdash; for the little moments, the laughter, the conversations, and all the memories that somehow become my favourite ones.</p>
+          <p>On your birthday, I hope you see yourself the way the people who love you see you: rare, beautiful, and impossible to forget.</p>
+        </div>
+        <p class="letter-sign" contenteditable="true" spellcheck="false">write your own final paragraph here</p>
+      </div>
+      <span class="mark" aria-hidden="true">&#10045;</span>
+    </section>
+
+    <!-- FLOWERS -->
+    <section class="flowers">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal="fade">A little surprise, maybe?</p>
+        <h2 data-reveal>Would you like some <em>flowers?</em></h2>
+        <p class="lede" data-reveal="fade">Leave your address and maybe a small piece of this page will find its way to your door.</p>
+        <form class="flower-form" id="flowerForm" data-reveal>
+          <div class="field">
+            <label for="addr">Your address</label>
+            <input id="addr" type="text" placeholder="where should the flowers go?" required>
+          </div>
+          <button type="submit" class="flower-submit">Send a little hint</button>
+          <p class="flower-status" id="flowerStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ENVELOPE -->
+    <section class="magic-letter">
+      <div class="magic-inner">
+        <div class="magic-letter-copy" data-reveal>
+          <p class="micro">ONE MORE THING TO OPEN</p>
+          <h2>A letter, sealed<br>with a little <em>magic.</em></h2>
+          <p>Tap the envelope. It has been waiting for you.</p>
+        </div>
+        <a class="envelope-link" href="full-letter.html" aria-label="Open your letter" data-reveal>
+          <span class="magic-spark spark-a">&#10022;</span>
+          <span class="magic-spark spark-b">&#10022;</span>
+          <span class="magic-spark spark-c">&#10022;</span>
+          <span class="envelope" id="envelope" aria-label="Open letter envelope">
+            <span class="envelope-flap"></span>
+            <span class="envelope-note" id="envelopeNote">for you<br><i>&hearts;</i></span>
+          </span>
+          <span class="open-letter">OPEN ME &rarr;</span>
+        </a>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <p class="eyebrow" data-reveal="fade">One last thing</p>
+      <p data-reveal="fade">And if you ever forget how beautiful you are&hellip; come back here.</p>
+      <p class="signoff" contenteditable="true" spellcheck="false">Happy Birthday, [NAME].</p>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
+<script src="animations.js"></script>
+</body>
+</html>
