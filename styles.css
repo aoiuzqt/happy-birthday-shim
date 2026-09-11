@@ -958,8 +958,8 @@ body.full-letter-page .grain {
   50%{ opacity: 1; transform: scale(1.15) translateY(-4px); }
 }
 @keyframes heroTitleIn{
-  from{ opacity: 0; transform: translateY(36px); }
-  to{ opacity: 1; transform: translateY(0); }
+  from{ opacity: 0; }
+  to{ opacity: 1; }
 }
 @keyframes shimmerNote{
   0%, 100%{ opacity: .85; }
@@ -977,35 +977,46 @@ body.full-letter-page .grain {
 /* --- scroll reveal system (driven by animations.js toggling .in-view) --- */
 [data-reveal]{
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .9s var(--ease), transform .9s var(--ease);
-  will-change: opacity, transform;
+  transition: opacity .9s var(--ease);
+  will-change: opacity;
 }
 [data-reveal].in-view{
   opacity: 1;
-  transform: translateY(0);
 }
-[data-reveal="fade"]{ transform: none; }
-[data-reveal="fade"].in-view{ transform: none; }
 
 [data-reveal-group] > *{
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transition: opacity .7s var(--ease);
 }
 [data-reveal-group].in-view > *{
   opacity: 1;
-  transform: translateY(0);
 }
 [data-reveal-group].in-view > *:nth-child(1){ transition-delay: .05s; }
 [data-reveal-group].in-view > *:nth-child(2){ transition-delay: .16s; }
 [data-reveal-group].in-view > *:nth-child(3){ transition-delay: .27s; }
 [data-reveal-group].in-view > *:nth-child(4){ transition-delay: .38s; }
 
+.touch-ripple{
+  position: fixed;
+  z-index: 1000;
+  left: var(--touch-x);
+  top: var(--touch-y);
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(255, 195, 152, .8);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(.25);
+  animation: touchRipple .65s var(--ease) forwards;
+}
+@keyframes touchRipple{
+  0%{ opacity: .85; transform: translate(-50%, -50%) scale(.25); }
+  100%{ opacity: 0; transform: translate(-50%, -50%) scale(5); }
+}
+
 @media (prefers-reduced-motion: reduce){
   [data-reveal], [data-reveal-group] > *{
     opacity: 1 !important;
-    transform: none !important;
     transition: none !important;
   }
 }

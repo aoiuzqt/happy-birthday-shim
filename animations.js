@@ -10,6 +10,24 @@
   var prefersReduced = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Give taps and clicks a small, screen-level ripple without changing layout.
+  if (!prefersReduced && "PointerEvent" in window) {
+    document.addEventListener("pointerdown", function (event) {
+      if (event.button !== undefined && event.button !== 0) return;
+
+      var ripple = document.createElement("span");
+      ripple.className = "touch-ripple";
+      ripple.setAttribute("aria-hidden", "true");
+      ripple.style.setProperty("--touch-x", event.clientX + "px");
+      ripple.style.setProperty("--touch-y", event.clientY + "px");
+      document.body.appendChild(ripple);
+
+      ripple.addEventListener("animationend", function () {
+        ripple.remove();
+      }, { once: true });
+    }, { passive: true });
+  }
+
   var targets = document.querySelectorAll("[data-reveal], [data-reveal-group]");
 
   if (!targets.length) return;
@@ -42,5 +60,4 @@
       note.classList.add("show");
       setTimeout(function () { note.classList.remove("show"); }, 1600);
     }, 1400);
-  }
 })();
