@@ -60,4 +60,5 @@
       note.classList.add("show");
       setTimeout(function () { note.classList.remove("show"); }, 1600);
     }, 1400);
+  }
 })();
