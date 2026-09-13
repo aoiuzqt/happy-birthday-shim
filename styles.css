@@ -243,13 +243,16 @@ section{ position: relative; }
 }
 
 /* ---------- Hero ---------- */
-.hero{
+.hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(160deg, #2c2730 0%, #221e22 55%, #1c191c 100%);
-  padding-top: 90px;
-  padding-bottom: 70px;
+  background-image: url("assets/1.jpeg");
+  background-size: cover;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+
+  height: auto;
 }
 .hero .wrap{
   width: 100%;
@@ -270,7 +273,8 @@ section{ position: relative; }
   color: var(--cream-text);
   margin: 0;
 }
-.hero h1 em{ font-style: italic; color: var(--blush); }
+.hero h1 em{ font-style: italic; 
+color: var(--blush); }
 .hero-frame{
   aspect-ratio: 4 / 5;
   border-radius: 2px;
@@ -282,7 +286,7 @@ section{ position: relative; }
 
 /* ---------- Study in Beauty ---------- */
 .beauty{
-  background: var(--cream);
+  background: #1e0101;
   padding: 130px 0 110px;
   text-align: center;
 }
@@ -341,6 +345,15 @@ section{ position: relative; }
     gap: 60px;
     width: 100%;
     padding: 60px 8%;
+    
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: #1e0101;
+      background-size: cover;
+      background-position: center 50%;
+      background-repeat: no-repeat;
+      height: auto;
 }
 
 /* Horizontal photo box */
@@ -393,11 +406,10 @@ section{ position: relative; }
 }
 
 .smile-copy h2 em {
-    font-style: italic;
+    font-family: 'Ballet', cursive;
+    font-style: normal;
     color: var(--rose);
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: block;
 }
 
 .smile-note {
@@ -440,7 +452,9 @@ section{ position: relative; }
   min-height: 70vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, #24202a 0%, #1d1a1f 100%);
+  background-image:url("assets/WhatsApp Image 2026-09-13 at 12.48.33 AM.jpeg");
+  background-size: cover;
+  background-position: center;
   padding: 90px 0;
 }
 .quote blockquote{
@@ -498,7 +512,7 @@ section{ position: relative; }
 
 /* ---------- A few frames (collage) ---------- */
 .frames{
-  background: var(--cream);
+  background: colour #393938;;
   padding: 20px 0 130px;
 }
 .frames .eyebrow{ margin-bottom: 22px; }
@@ -958,8 +972,8 @@ body.full-letter-page .grain {
   50%{ opacity: 1; transform: scale(1.15) translateY(-4px); }
 }
 @keyframes heroTitleIn{
-  from{ opacity: 0; transform: translateY(36px); }
-  to{ opacity: 1; transform: translateY(0); }
+  from{ opacity: 0; }
+  to{ opacity: 1; }
 }
 @keyframes shimmerNote{
   0%, 100%{ opacity: .85; }
@@ -977,35 +991,46 @@ body.full-letter-page .grain {
 /* --- scroll reveal system (driven by animations.js toggling .in-view) --- */
 [data-reveal]{
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .9s var(--ease), transform .9s var(--ease);
-  will-change: opacity, transform;
+  transition: opacity .9s var(--ease);
+  will-change: opacity;
 }
 [data-reveal].in-view{
   opacity: 1;
-  transform: translateY(0);
 }
-[data-reveal="fade"]{ transform: none; }
-[data-reveal="fade"].in-view{ transform: none; }
 
 [data-reveal-group] > *{
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transition: opacity .7s var(--ease);
 }
 [data-reveal-group].in-view > *{
   opacity: 1;
-  transform: translateY(0);
 }
 [data-reveal-group].in-view > *:nth-child(1){ transition-delay: .05s; }
 [data-reveal-group].in-view > *:nth-child(2){ transition-delay: .16s; }
 [data-reveal-group].in-view > *:nth-child(3){ transition-delay: .27s; }
 [data-reveal-group].in-view > *:nth-child(4){ transition-delay: .38s; }
 
+.touch-ripple{
+  position: fixed;
+  z-index: 1000;
+  left: var(--touch-x);
+  top: var(--touch-y);
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(255, 195, 152, .8);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(.25);
+  animation: touchRipple .65s var(--ease) forwards;
+}
+@keyframes touchRipple{
+  0%{ opacity: .85; transform: translate(-50%, -50%) scale(.25); }
+  100%{ opacity: 0; transform: translate(-50%, -50%) scale(5); }
+}
+
 @media (prefers-reduced-motion: reduce){
   [data-reveal], [data-reveal-group] > *{
     opacity: 1 !important;
-    transform: none !important;
     transition: none !important;
   }
 }
