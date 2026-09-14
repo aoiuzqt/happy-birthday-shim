@@ -23,22 +23,6 @@
     window.scrollTo(0, 0);
   });
 
-  /* ---------- Music toggle in nav + press-play section ---------- */
-  const musicToggle = document.getElementById('musicToggle');
-  const musicLabel = document.getElementById('musicLabel');
-  const sectionPlay = document.getElementById('sectionPlay');
-  let playing = false;
-
-  function setPlaying(next) {
-    playing = next;
-    musicToggle.setAttribute('aria-pressed', String(playing));
-    musicLabel.textContent = playing ? 'Playing' : 'Music';
-    sectionPlay.setAttribute('aria-pressed', String(playing));
-    sectionPlay.setAttribute('aria-label', playing ? 'Pause song' : 'Play song');
-    // Hook your own <audio> element here if you add a real track:
-    // playing ? audioEl.play() : audioEl.pause();
-  }
-
   musicToggle.addEventListener('click', () => setPlaying(!playing));
   sectionPlay.addEventListener('click', () => setPlaying(!playing));
 
