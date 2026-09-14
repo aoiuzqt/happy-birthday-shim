@@ -184,20 +184,380 @@
     </section>
 
     <!-- PRESS PLAY -->
-    <section class="player">
-      <label class="photo-slot player-frame" data-slot>
-        <span class="slot-label">Photo</span>
-        <input type="file" accept="image/*">
-      </label>
-      <div class="wrap">
-        <p class="eyebrow" data-reveal="fade">A little something for you</p>
-        <h2 data-reveal>Press <em>play.</em></h2>
-        <button type="button" class="play-toggle" id="sectionPlay" aria-pressed="false" aria-label="Play song">
-          <span class="icon-play" aria-hidden="true">&#9654;</span>
-          <span class="icon-pause" aria-hidden="true">&#10073;&#10073;</span>
-        </button>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pages of Us — Anniversary Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-label">Happy Anniversary</div>
+<div class="top-title">Pages of Us</div>
+
+<div class="stage" id="stage">
+  <div class="book" id="book">
+
+    <!-- SPREAD 0: COVER -->
+    <div class="spread" data-index="0">
+      <div class="face front">
+        <div class="half hearts-bg">
+          <div class="dotted-frame"></div>
+          <div class="cover-title script" style="font-size:22px;color:var(--rose);margin-top:8px;" contenteditable="true">The day of</div>
+          <div class="locket-wrap">
+            <svg class="chain-svg" viewBox="0 0 60 26"><path d="M30,0 C10,4 10,20 30,22 C50,20 50,4 30,0" fill="none" stroke="#c7ccd1" stroke-width="2.5"/></svg>
+            <div class="ph locket editable" contenteditable="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span>Add photo</span>
+            </div>
+          </div>
+          <div class="cover-title script" style="font-size:30px;color:var(--rose);margin-top:2px;" contenteditable="true">Anniversary</div>
+          <div class="garamond editable" style="text-align:center;font-size:13px;color:var(--ink);opacity:.75;letter-spacing:.06em;" contenteditable="true">24 / 01 / 24</div>
+        </div>
+        <div class="half hearts-bg">
+          <div class="dotted-frame"></div>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+            <div class="script editable" style="font-size:36px;color:var(--rose);" contenteditable="true">I love you.</div>
+          </div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
       </div>
-    </section>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 1: CALENDAR -->
+    <div class="spread" data-index="1">
+      <div class="face front">
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="hand editable" style="font-size:12px;color:var(--rose);" contenteditable="true">Welcome to our anniversary book,</div>
+          <div class="script editable" style="font-size:30px;color:var(--rose);margin-top:24px;" contenteditable="true">Pages of us</div>
+          <div class="hand editable" style="font-size:13px;opacity:.6;margin-top:8px;" contenteditable="true">To [Partner], from [Partner]</div>
+        </div>
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="page-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 4v5h-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="serif editable" style="font-style:italic;font-size:22px;color:var(--ink);" contenteditable="true">August</div>
+          <div class="cal-grid">
+            <div class="dow">S</div><div class="dow">M</div><div class="dow">T</div><div class="dow">W</div><div class="dow">T</div><div class="dow">F</div><div class="dow">S</div>
+            <div class="day"></div><div class="day"></div><div class="day"></div><div class="day"></div><div class="day"></div><div class="day"></div><div class="day">1</div>
+            <div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div>
+            <div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day marked editable" contenteditable="true">15</div>
+            <div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div>
+            <div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div>
+            <div class="day">30</div><div class="day">31</div>
+          </div>
+          <div class="hand editable" style="font-size:12px;color:var(--rose);margin-top:auto;" contenteditable="true">Today is our special day ♡</div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 2: CHAPTER / HOW WE MET -->
+    <div class="spread" data-index="2">
+      <div class="face front">
+        <div class="half maroon hearts-bg on-maroon">
+          <div class="dotted-frame"></div>
+          <div class="script editable" style="font-size:18px;" contenteditable="true">it's our</div>
+          <div class="big-num serif editable" contenteditable="true">2nd</div>
+          <div class="script editable" style="font-size:24px;" contenteditable="true">Chapter</div>
+        </div>
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="page-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="serif editable" style="font-size:14px;color:var(--ink);text-align:center;" contenteditable="true">How we met</div>
+          <svg class="timeline-svg" viewBox="0 0 260 110">
+            <polyline points="10,90 60,30 110,70 160,20 210,60 250,15" fill="none" stroke="#c9848c" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <circle cx="10" cy="90" r="4" fill="#a83240"/><circle cx="60" cy="30" r="4" fill="#a83240"/><circle cx="110" cy="70" r="4" fill="#a83240"/>
+            <circle cx="160" cy="20" r="4" fill="#a83240"/><circle cx="210" cy="60" r="4" fill="#a83240"/><circle cx="250" cy="15" r="4" fill="#a83240"/>
+          </svg>
+          <div class="ph editable" style="height:58px;margin-top:2px;" contenteditable="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>chat screenshot</span>
+          </div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 3: PROFILES -->
+    <div class="spread" data-index="3">
+      <div class="face front">
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="profile-top">
+            <div class="serif editable" style="font-size:16px;color:var(--ink);" contenteditable="true">Partner One</div>
+          </div>
+          <div class="garamond editable" style="font-size:11px;opacity:.6;" contenteditable="true">DD-MM-YY</div>
+          <div class="ph editable" style="flex:1;margin-top:8px;" contenteditable="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Add photo</span>
+          </div>
+          <div class="star-badge dark editable" contenteditable="true">Aries<br>boy</div>
+          <ul class="plain editable" contenteditable="true">
+            <li>Hobby: ...</li>
+            <li>Favorite drink: ...</li>
+            <li>Personality: ...</li>
+          </ul>
+        </div>
+        <div class="half maroon">
+          <div class="dotted-frame"></div>
+          <div class="page-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="profile-top">
+            <div class="serif editable" style="font-size:16px;" contenteditable="true">Partner Two</div>
+          </div>
+          <div class="garamond editable" style="font-size:11px;opacity:.7;" contenteditable="true">DD-MM-YY</div>
+          <div class="ph editable" style="flex:1;margin-top:8px;" contenteditable="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Add photo</span>
+          </div>
+          <div class="star-badge light editable" contenteditable="true">Gemini<br>girl</div>
+          <ul class="plain editable" contenteditable="true">
+            <li>Hobby: ...</li>
+            <li>Favorite drink: ...</li>
+            <li>Personality: ...</li>
+          </ul>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 4: MESSAGE + COLLAGE -->
+    <div class="spread" data-index="4">
+      <div class="face front">
+        <div class="half" style="padding:10px;">
+          <div class="dotted-frame"></div>
+          <div class="collage" style="padding:14px;position:relative;">
+            <div class="tape tl"></div>
+            <div class="ph editable" contenteditable="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>photo</span></div>
+            <div class="ph editable" style="grid-column:span 2;" contenteditable="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg><span>photo</span></div>
+          </div>
+        </div>
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="page-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+          <div class="serif editable" style="font-size:14px;color:var(--ink);" contenteditable="true">Another year, another chapter, another reason to celebrate.</div>
+          <div class="script editable" style="font-size:26px;color:var(--rose);margin-top:12px;" contenteditable="true">Happy Anniversary!</div>
+          <p class="garamond editable" style="font-size:13px;line-height:1.7;color:var(--ink);margin-top:10px;" contenteditable="true">May this journey continue to be filled with growth, laughter, meaningful moments, and endless happiness. Here's to everything you've achieved and everything that's still to come.</p>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 5: FIRST DATE -->
+    <div class="spread" data-index="5">
+      <div class="face front">
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+            <div class="ph editable" style="width:56px;height:56px;border-radius:50%;" contenteditable="false"><span style="font-size:9px;">you</span></div>
+            <div class="hand" style="font-size:12px;opacity:.6;">started from a very simple story</div>
+            <div class="ph editable" style="width:56px;height:56px;border-radius:50%;" contenteditable="false"><span style="font-size:9px;">me</span></div>
+            <div class="hand editable" style="font-size:14px;color:var(--rose);" contenteditable="true">"us" became my favorite thing ever</div>
+          </div>
+        </div>
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="page-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+          <div class="script editable" style="font-size:20px;color:var(--rose);text-align:center;" contenteditable="true">Our first date</div>
+          <div class="ticket">
+            <div class="garamond editable" style="font-size:11px;text-align:center;color:var(--ink);letter-spacing:.08em;" contenteditable="true">ADMIT TWO · MEMORY LANE</div>
+            <div class="tline"></div>
+            <div class="barcode"></div>
+          </div>
+          <div class="booth-strip">
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="cap">and now</div>
+          </div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 6: I LOVE LIST -->
+    <div class="spread" data-index="6">
+      <div class="face front">
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="script editable" style="font-size:20px;color:var(--rose);" contenteditable="true">I love...</div>
+          <ol class="numbered editable" contenteditable="true">
+            <li>your smile</li><li>your smell</li><li>your prettiness</li><li>your laugh</li><li>yourself</li>
+            <li>your jokes</li><li>your pure heart</li><li>your kindness</li><li>your voice</li><li>your patience</li>
+          </ol>
+        </div>
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="page-icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </div>
+          <div class="script editable" style="font-size:18px;color:var(--rose);text-align:right;" contenteditable="true">You're the best part</div>
+          <div class="love-list-grid" style="flex:1;">
+            <div class="ph heart-ph small editable" contenteditable="false"></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph heart-ph small editable" contenteditable="false"></div>
+          </div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 7: LOVE OF MY LIFE -->
+    <div class="spread" data-index="7">
+      <div class="face front">
+        <div class="half maroon" style="padding:8px;">
+          <div class="dotted-frame"></div>
+          <div class="collage" style="padding:10px;position:relative;">
+            <div class="tape tr" style="background:rgba(248,241,229,.4);"></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" style="grid-column:span 2;" contenteditable="false"><span>photo</span></div>
+          </div>
+        </div>
+        <div class="half maroon">
+          <div class="dotted-frame"></div>
+          <div class="page-icons"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <div class="script editable" style="font-size:20px;text-align:right;" contenteditable="true">You're the love of</div>
+          <div class="heart-photo-page">
+            <div class="ph heart-ph big editable" contenteditable="false"></div>
+          </div>
+          <div class="script editable" style="font-size:20px;text-align:left;" contenteditable="true">my life.</div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+    <!-- SPREAD 8: SONGS + FINAL COLLAGE -->
+    <div class="spread" data-index="8">
+      <div class="face front">
+        <div class="half">
+          <div class="dotted-frame"></div>
+          <div class="script editable" style="font-size:18px;color:var(--rose);" contenteditable="true">Our favorite songs</div>
+          <div class="vinyl"></div>
+          <ol class="numbered editable" style="margin-top:8px;" contenteditable="true">
+            <li><u>Song title</u></li><li><u>Song title</u></li><li><u>Song title</u></li><li><u>Song title</u></li><li><u>Song title</u></li>
+          </ol>
+        </div>
+        <div class="half maroon" style="padding:8px;">
+          <div class="dotted-frame"></div>
+          <div class="page-icons"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <div class="collage three" style="flex:1;padding:10px;">
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+            <div class="ph editable" contenteditable="false"><span>photo</span></div>
+          </div>
+          <div class="final-text editable" style="margin-top:4px;" contenteditable="true">You & I, always.</div>
+        </div>
+        <div class="spine-shadow"></div>
+        <div class="corner-fold"></div>
+      </div>
+      <div class="face back"></div>
+    </div>
+
+  </div>
+
+  <div class="click-zone left" id="zoneLeft" title="Previous page"></div>
+  <div class="click-zone right" id="zoneRight" title="Next page"></div>
+</div>
+
+<div class="controls">
+  <button class="nav-btn" id="prevBtn" aria-label="Previous page">‹</button>
+  <div class="counter"><span id="counter">1 / 9</span></div>
+  <button class="nav-btn" id="nextBtn" aria-label="Next page">›</button>
+</div>
+<div class="dots" id="dots"></div>
+<div class="hint">Click the arrows, the edges of the book, or use the ← → keys to turn the pages. Click any text to edit it, and replace the dashed placeholder boxes with your own &lt;img&gt; tags.</div>
+
+<script>
+  const spreads = Array.from(document.querySelectorAll('.spread'));
+  const total = spreads.length;
+  let current = 0;
+
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const counter = document.getElementById('counter');
+  const dotsWrap = document.getElementById('dots');
+
+  spreads.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function layout(){
+    spreads.forEach((s, i) => {
+      s.style.zIndex = i < current ? (total + i) : (total - i);
+      s.classList.toggle('flipped', i < current);
+    });
+    counter.textContent = (current + 1) + ' / ' + total;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+  }
+
+  function goTo(index){
+    if(index < 0 || index > total - 1 || index === current) return;
+    current = index;
+    layout();
+  }
+  function next(){ if(current < total - 1){ current++; layout(); } }
+  function prev(){ if(current > 0){ current--; layout(); } }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+  document.getElementById('zoneRight').addEventListener('click', next);
+  document.getElementById('zoneLeft').addEventListener('click', prev);
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowRight') next();
+    if(e.key === 'ArrowLeft') prev();
+  });
+
+  layout();
+</script>
+
+</body>
+</html>
 
     <!-- LETTER -->
     <section class="letter">
