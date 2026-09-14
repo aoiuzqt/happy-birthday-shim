@@ -11,37 +11,120 @@
 <body class="gate-open">
 
   <!-- ============ GATE / SONG INTRO ============ -->
-  <div id="gate">
-    <div class="gate-inner">
-      <h1 class="gate-heading">Before you<br><em>enter&hellip;</em></h1>
-      <p class="gate-sub">Choose the soundtrack for this little story.</p>
+<div id="gate">
 
-      <ul class="songs" id="songList">
-        <li>
-          <button type="button" class="song" data-song="1" aria-pressed="true">
-            <span class="song-play" aria-hidden="true">&#9654;</span>
-            <span class="song-meta">
-              <span class="song-title">Song 01</span>
-              <span class="song-artist">Replace with your song</span>
-            </span>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="song" data-song="2" aria-pressed="false">
-            <span class="song-play" aria-hidden="true">&#9654;</span>
-            <span class="song-meta">
-              <span class="song-title">Song 02</span>
-              <span class="song-artist">Replace with your song</span>
-            </span>
-          </button>
-        </li>
-      </ul>
+  <div class="gate-inner">
 
-      <button type="button" class="enter-btn" id="enterBtn">Enter</button>
-      <p class="gate-hint" id="gateHint">a song is selected</p>
-    </div>
+    <h1 class="gate-heading">
+      Before you<br>
+      <em>enter&hellip;</em>
+    </h1>
+
+    <p class="gate-sub">
+      Choose the soundtrack for this little story.
+    </p>
+
+
+    <ul class="songs" id="songList">
+
+      <!-- SONG 01 -->
+      <li>
+
+        <button
+          type="button"
+          class="song"
+          data-song="1"
+          aria-pressed="true"
+        >
+
+          <span
+            class="song-play"
+            aria-hidden="true"
+          >
+            &#9654;
+          </span>
+
+          <span class="song-meta">
+
+            <span class="song-title">
+              Song 01
+            </span>
+
+            <span class="song-artist">
+              Your first song
+            </span>
+
+          </span>
+
+        </button>
+
+      </li>
+
+
+      <!-- SONG 02 -->
+      <li>
+
+        <button
+          type="button"
+          class="song"
+          data-song="2"
+          aria-pressed="false"
+        >
+
+          <span
+            class="song-play"
+            aria-hidden="true"
+          >
+            &#9654;
+          </span>
+
+          <span class="song-meta">
+
+            <span class="song-title">
+              Song 02
+            </span>
+
+            <span class="song-artist">
+              Your second song
+            </span>
+
+          </span>
+
+        </button>
+
+      </li>
+
+    </ul>
+
+
+    <button
+      type="button"
+      class="enter-btn"
+      id="enterBtn"
+    >
+      Enter
+    </button>
+
+
+    <p
+      class="gate-hint"
+      id="gateHint"
+    >
+      Song 01 selected
+    </p>
+
   </div>
 
+</div>
+
+
+<!-- MUSIC PLAYER -->
+
+<audio
+  id="audio"
+  preload="auto"
+></audio>
+ 
   <!-- ============ MAIN SITE ============ -->
   <main id="site">
 
