@@ -349,7 +349,7 @@ color: var(--blush); }
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background-color: #1e0101;
+      background-image:url("assets/ChatGPT Image Sep 15, 2026, 11_50_13 PM.png");
       background-size: cover;
       background-position: center 50%;
       background-repeat: no-repeat;
@@ -389,7 +389,7 @@ color: var(--blush); }
     display: flex;
     align-items: center;
     gap: 40px;
-    color: #17151a;
+    color: #ffc2c2;
     margin-bottom: 20px;
 }
 
@@ -398,7 +398,7 @@ color: var(--blush); }
     font-weight: 400;
     font-size: clamp(30px, 3.4vw, 42px);
     line-height: 1.28;
-    color: #17151a;
+    color: #f75959;
     margin: 0;
     display: flex;
     align-items: center;
