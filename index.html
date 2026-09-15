@@ -11,37 +11,120 @@
 <body class="gate-open">
 
   <!-- ============ GATE / SONG INTRO ============ -->
-  <div id="gate">
-    <div class="gate-inner">
-      <h1 class="gate-heading">Before you<br><em>enter&hellip;</em></h1>
-      <p class="gate-sub">Choose the soundtrack for this little story.</p>
+<div id="gate">
 
-      <ul class="songs" id="songList">
-        <li>
-          <button type="button" class="song" data-song="1" aria-pressed="true">
-            <span class="song-play" aria-hidden="true">&#9654;</span>
-            <span class="song-meta">
-              <span class="song-title">Song 01</span>
-              <span class="song-artist">Replace with your song</span>
-            </span>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="song" data-song="2" aria-pressed="false">
-            <span class="song-play" aria-hidden="true">&#9654;</span>
-            <span class="song-meta">
-              <span class="song-title">Song 02</span>
-              <span class="song-artist">Replace with your song</span>
-            </span>
-          </button>
-        </li>
-      </ul>
+  <div class="gate-inner">
 
-      <button type="button" class="enter-btn" id="enterBtn">Enter</button>
-      <p class="gate-hint" id="gateHint">a song is selected</p>
-    </div>
+    <h1 class="gate-heading">
+      Before you<br>
+      <em>enter&hellip;</em>
+    </h1>
+
+    <p class="gate-sub">
+      Choose the soundtrack for this little story.
+    </p>
+
+
+    <ul class="songs" id="songList">
+
+      <!-- SONG 01 -->
+      <li>
+
+        <button
+          type="button"
+          class="song"
+          data-song="1"
+          aria-pressed="true"
+        >
+
+          <span
+            class="song-play"
+            aria-hidden="true"
+          >
+            &#9654;
+          </span>
+
+          <span class="song-meta">
+
+            <span class="song-title">
+              Song 01
+            </span>
+
+            <span class="song-artist">
+              Your first song
+            </span>
+
+          </span>
+
+        </button>
+
+      </li>
+
+
+      <!-- SONG 02 -->
+      <li>
+
+        <button
+          type="button"
+          class="song"
+          data-song="2"
+          aria-pressed="false"
+        >
+
+          <span
+            class="song-play"
+            aria-hidden="true"
+          >
+            &#9654;
+          </span>
+
+          <span class="song-meta">
+
+            <span class="song-title">
+              Song 02
+            </span>
+
+            <span class="song-artist">
+              Your second song
+            </span>
+
+          </span>
+
+        </button>
+
+      </li>
+
+    </ul>
+
+
+    <button
+      type="button"
+      class="enter-btn"
+      id="enterBtn"
+    >
+      Enter
+    </button>
+
+
+    <p
+      class="gate-hint"
+      id="gateHint"
+    >
+      Song 01 selected
+    </p>
+
   </div>
 
+</div>
+
+
+<!-- MUSIC PLAYER -->
+
+<audio
+  id="audio"
+  preload="auto"
+></audio>
+ 
   <!-- ============ MAIN SITE ============ -->
   <main id="site">
 
@@ -118,11 +201,1473 @@
     </section>
 
     <!-- QUOTE -->
-    <section class="quote">
-      <div class="wrap">
-        <blockquote data-reveal>I don&rsquo;t think you realize <em>how beautiful you are</em> when you&rsquo;re simply being yourself.</blockquote>
+  ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dear Oza — New Year Letter</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Homemade+Apple&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   EVERYTHING IS SCOPED INSIDE #new-year-letter
+   So this page will NOT disturb your other website CSS.
+   ========================================================= */
+
+#new-year-letter {
+  --maroon-deep: #3a1015;
+  --maroon: #4a1620;
+  --maroon-light: #5e1e28;
+  --cream: #f3e9d2;
+  --cream-2: #efe3c9;
+  --red-accent: #7c1f24;
+  --red-bright: #9c2a2a;
+  --gold: #c9a24b;
+  --ink: #2b1210;
+
+  width: 100%;
+  max-width: 1157px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  box-sizing: border-box;
+}
+
+#new-year-letter *,
+#new-year-letter *::before,
+#new-year-letter *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   MAIN CARD
+   ========================= */
+
+#new-year-letter .ny-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1157 / 672;
+
+  display: grid;
+  grid-template-columns: 52% 48%;
+
+  overflow: hidden;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.10) 0px,
+      rgba(0,0,0,0.10) 2px,
+      transparent 2px,
+      transparent 6px
+    ),
+    radial-gradient(
+      ellipse at 30% 20%,
+      var(--maroon-light),
+      var(--maroon-deep) 70%
+    );
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   LEFT PANEL
+   ========================================================= */
+
+#new-year-letter .ny-left {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  padding: 5% 4%;
+}
+
+
+/* =========================
+   BACKGROUND PHOTO
+   ========================= */
+
+#new-year-letter .ny-bg-photo {
+  position: absolute;
+
+  top: 3%;
+  left: 5%;
+
+  width: 14%;
+  height: 32%;
+
+  transform: rotate(-7deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      #5a4a44,
+      #9b8778
+    );
+
+  border: clamp(3px, 0.5vw, 6px) solid #efe6d6;
+
+  box-shadow:
+    0 12px 22px rgba(0,0,0,0.45);
+
+  z-index: 2;
+}
+
+
+/* =========================
+   PHOTO SLOTS
+   ========================= */
+
+#new-year-letter .ny-slot {
+  position: relative;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5a4a44 0%,
+      #8f7a6d 40%,
+      #c9bdad 100%
+    );
+
+  filter: grayscale(0.15);
+}
+
+#new-year-letter .ny-slot img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: none;
+}
+
+#new-year-letter .ny-slot.has-img img {
+  display: block;
+}
+
+#new-year-letter .ny-slot.has-img .ny-slot-label {
+  display: none;
+}
+
+#new-year-letter .ny-slot-label {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  color: #f3ece0;
+
+  font-family: 'Caveat', cursive;
+  font-size: clamp(11px, 1.35vw, 17px);
+
+  text-align: center;
+
+  background: rgba(60,30,30,0.18);
+}
+
+#new-year-letter .ny-slot-label svg {
+  width: clamp(18px, 2vw, 27px);
+  height: clamp(18px, 2vw, 27px);
+}
+
+#new-year-letter .ny-slot input[type="file"] {
+  display: none;
+}
+
+
+/* =========================
+   BOW
+   ========================= */
+
+#new-year-letter .ny-bow {
+  position: absolute;
+
+  top: -1%;
+  left: 15%;
+
+  width: 9%;
+
+  z-index: 6;
+
+  filter:
+    drop-shadow(0 4px 6px rgba(0,0,0,.4));
+}
+
+
+/* =========================
+   CAMERA
+   ========================= */
+
+#new-year-letter .ny-camera {
+  position: absolute;
+
+  top: 2%;
+  right: 5%;
+
+  width: 15%;
+
+  z-index: 5;
+
+  transform: rotate(8deg);
+}
+
+#new-year-letter .ny-camera svg {
+  width: 100%;
+  height: auto;
+
+  filter:
+    drop-shadow(0 6px 10px rgba(0,0,0,.4));
+}
+
+
+/* =========================
+   WASHI TAPE
+   ========================= */
+
+#new-year-letter .ny-washi {
+  position: absolute;
+
+  top: 1%;
+  right: 14%;
+
+  width: 4%;
+  height: 3%;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #e7d3a1,
+      #e7d3a1 4px,
+      #d9bd82 4px,
+      #d9bd82 8px
+    );
+
+  opacity: .85;
+
+  transform: rotate(-30deg);
+
+  z-index: 6;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   COLLAGE
+   ========================================================= */
+
+#new-year-letter .ny-collage {
+  position: absolute;
+
+  top: 19%;
+  left: 18%;
+
+  width: 45%;
+  aspect-ratio: 1 / 1;
+
+  background: #f2ece0;
+
+  padding: 1.3%;
+
+  transform: rotate(-2deg);
+
+  box-shadow:
+    0 18px 34px rgba(0,0,0,.5);
+
+  z-index: 3;
+}
+
+#new-year-letter .ny-collage-grid {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 1.8%;
+
+  background: #f2ece0;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+#new-year-letter .ny-tag {
+  position: absolute;
+
+  background: var(--cream);
+
+  color: var(--ink);
+
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+
+  padding: 4px 13px 5px;
+
+  border: 1.5px solid var(--red-accent);
+
+  box-shadow:
+    3px 3px 0 rgba(0,0,0,.28);
+
+  z-index: 7;
+
+  line-height: 1.1;
+
+  font-size: clamp(14px, 1.8vw, 21px);
+}
+
+#new-year-letter .ny-new-year {
+  top: 28%;
+  right: 2%;
+  transform: rotate(-3deg);
+}
+
+#new-year-letter .ny-sweet {
+  top: 45%;
+  left: -1%;
+  transform: rotate(-4deg);
+}
+
+#new-year-letter .ny-letter {
+  top: 70%;
+  left: 43%;
+  transform: rotate(-2deg);
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+#new-year-letter .ny-star {
+  position: absolute;
+
+  color: var(--red-bright);
+
+  z-index: 4;
+}
+
+#new-year-letter .ny-star svg {
+  width: 100%;
+  height: 100%;
+
+  filter:
+    drop-shadow(0 2px 2px rgba(0,0,0,.35));
+}
+
+#new-year-letter .ny-star-1 {
+  top: 73%;
+  left: 4%;
+  width: 3.2%;
+}
+
+#new-year-letter .ny-star-2 {
+  top: 80%;
+  left: 49%;
+  width: 2.5%;
+}
+
+#new-year-letter .ny-star-3 {
+  top: 9%;
+  left: 39%;
+  width: 2%;
+}
+
+
+/* =========================================================
+   FLOWER
+   ========================================================= */
+
+#new-year-letter .ny-flower {
+  position: absolute;
+
+  bottom: -5%;
+  left: -2%;
+
+  width: 24%;
+
+  z-index: 4;
+}
+
+#new-year-letter .ny-flower svg {
+  width: 100%;
+  height: auto;
+
+  filter:
+    drop-shadow(0 8px 10px rgba(0,0,0,.4));
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+#new-year-letter .ny-quote {
+  position: absolute;
+
+  bottom: 5%;
+  left: 4%;
+
+  width: 30%;
+
+  color: var(--cream);
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-style: italic;
+
+  font-size: clamp(11px, 1.45vw, 17px);
+
+  line-height: 1.45;
+
+  z-index: 5;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.5);
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+   ========================================================= */
+
+#new-year-letter .ny-right {
+  position: relative;
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: 6% 7%;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   LETTER
+   ========================================================= */
+
+#new-year-letter .ny-letter-paper {
+  position: relative;
+
+  width: 100%;
+  height: 91%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbf6ea,
+      #f3ecd9
+    );
+
+  padding: 6% 8% 5%;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.4);
+
+  clip-path: polygon(
+    0% 1%,
+    4% 0%,
+    10% 1.5%,
+    18% 0%,
+    26% 1.2%,
+    34% 0.2%,
+    42% 1.4%,
+    50% 0%,
+    58% 1.3%,
+    66% 0.3%,
+    74% 1.5%,
+    82% 0.2%,
+    90% 1.2%,
+    96% 0%,
+    100% 1%,
+
+    100% 99%,
+    96% 100%,
+    90% 98.6%,
+    82% 100%,
+    74% 98.7%,
+    66% 100%,
+    58% 98.8%,
+    50% 100%,
+    42% 98.6%,
+    34% 100%,
+    26% 98.7%,
+    18% 100%,
+    10% 98.6%,
+    4% 100%,
+    0% 99%
+  );
+}
+
+
+/* =========================================================
+   SEAL
+   ========================================================= */
+
+#new-year-letter .ny-seal {
+  position: absolute;
+
+  top: 2%;
+  left: 5%;
+
+  width: 9%;
+
+  transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   STAMP
+   ========================================================= */
+
+#new-year-letter .ny-stamp {
+  position: absolute;
+
+  top: 3%;
+  right: 5%;
+
+  width: 8%;
+  aspect-ratio: 42 / 52;
+
+  background: #efe3c9;
+
+  border: 2px dashed #b23a3a;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(6deg);
+
+  box-shadow:
+    0 4px 8px rgba(0,0,0,.25);
+}
+
+#new-year-letter .ny-stamp svg {
+  width: 55%;
+  height: 55%;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+#new-year-letter .ny-heading {
+  font-family: 'Caveat', cursive;
+
+  color: var(--red-accent);
+
+  font-weight: 700;
+
+  font-size: clamp(27px, 3.6vw, 43px);
+
+  letter-spacing: 1px;
+
+  margin: 1% 0 4%;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BODY TEXT
+   ========================================================= */
+
+#new-year-letter .ny-body {
+  font-family: 'Cormorant Garamond', serif;
+
+  color: #2c1512;
+
+  font-size: clamp(11px, 1.3vw, 15.5px);
+
+  line-height: 1.55;
+
+  text-align: justify;
+
+  height: 67%;
+
+  overflow-y: auto;
+
+  padding-right: 3%;
+}
+
+
+/* Scrollbar */
+
+#new-year-letter .ny-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+#new-year-letter .ny-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#new-year-letter .ny-body::-webkit-scrollbar-thumb {
+  background: #b89b8d;
+  border-radius: 10px;
+}
+
+
+#new-year-letter .ny-body p {
+  margin: 0 0 3.5%;
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+#new-year-letter .ny-signature {
+  margin-top: 3%;
+
+  text-align: right;
+
+  font-family: 'Homemade Apple', cursive;
+
+  color: var(--red-accent);
+
+  font-size: clamp(13px, 1.8vw, 20px);
+}
+
+
+/* =========================================================
+   CORNER FLOURISH
+   ========================================================= */
+
+#new-year-letter .ny-flourish {
+  position: absolute;
+
+  width: 7%;
+
+  color: var(--gold);
+
+  opacity: .8;
+}
+
+#new-year-letter .ny-flourish-tl {
+  top: 2%;
+  left: 2%;
+}
+
+#new-year-letter .ny-flourish-tr {
+  top: 2%;
+  right: 2%;
+
+  transform: scaleX(-1);
+}
+
+
+/* =========================================================
+   HINT
+   ========================================================= */
+
+#new-year-letter .ny-hint {
+  margin-top: 10px;
+
+  text-align: center;
+
+  color: #c9a5a5;
+
+  font-family: 'Caveat', cursive;
+
+  font-size: clamp(12px, 1.4vw, 15px);
+
+  letter-spacing: .3px;
+}
+
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  #new-year-letter .ny-card {
+    min-width: 0;
+
+    aspect-ratio: 1157 / 672;
+
+    border-radius: 4px;
+  }
+
+  #new-year-letter .ny-body {
+    font-size: 10px;
+  }
+
+  #new-year-letter .ny-heading {
+    font-size: 24px;
+  }
+
+  #new-year-letter .ny-tag {
+    padding: 2px 7px 3px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     ISOLATED PAGE WRAPPER
+     ========================================================= -->
+
+<div id="new-year-letter">
+
+  <div class="ny-card">
+
+
+    <!-- =====================================================
+         LEFT SIDE
+         ===================================================== -->
+
+    <div class="ny-left">
+
+
+      <!-- Background photo -->
+
+      <div class="ny-bg-photo ny-slot" id="ny-slotBg">
+
+        <input
+          type="file"
+          accept="image/*"
+          id="ny-fileBg"
+        >
+
+        <img id="ny-imgBg" alt="">
+
+        <div class="ny-slot-label">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <circle cx="12" cy="12" r="3.2"/>
+            <path d="M8 5l1.5-2h5L16 5"/>
+          </svg>
+
+          add photo
+
+        </div>
+
       </div>
-    </section>
+
+
+      <!-- Bow -->
+
+      <svg
+        class="ny-bow"
+        viewBox="0 0 100 80"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+        <path
+          d="M50 40 C40 10, 5 10, 5 35 C5 55, 30 50, 50 40 Z"
+          fill="#8a1f1f"
+          stroke="#5c1518"
+          stroke-width="2"
+        />
+
+        <path
+          d="M50 40 C60 10, 95 10, 95 35 C95 55, 70 50, 50 40 Z"
+          fill="#9c2a2a"
+          stroke="#5c1518"
+          stroke-width="2"
+        />
+
+        <circle
+          cx="50"
+          cy="40"
+          r="8"
+          fill="#7c1f24"
+          stroke="#5c1518"
+          stroke-width="2"
+        />
+
+        <path
+          d="M46 46 L38 68 L48 62 Z"
+          fill="#8a1f1f"
+          stroke="#5c1518"
+          stroke-width="1.5"
+        />
+
+        <path
+          d="M54 46 L62 68 L52 62 Z"
+          fill="#9c2a2a"
+          stroke="#5c1518"
+          stroke-width="1.5"
+        />
+
+      </svg>
+
+
+      <!-- Camera -->
+
+      <div class="ny-camera">
+
+        <svg
+          viewBox="0 0 160 110"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <rect
+            x="6"
+            y="28"
+            width="148"
+            height="76"
+            rx="10"
+            fill="#7c1f24"
+            stroke="#4a1216"
+            stroke-width="3"
+          />
+
+          <rect
+            x="44"
+            y="8"
+            width="40"
+            height="24"
+            rx="4"
+            fill="#7c1f24"
+            stroke="#4a1216"
+            stroke-width="3"
+          />
+
+          <circle
+            cx="80"
+            cy="66"
+            r="30"
+            fill="#c9a24b"
+            stroke="#4a1216"
+            stroke-width="3"
+          />
+
+          <circle
+            cx="80"
+            cy="66"
+            r="21"
+            fill="#3a1015"
+            stroke="#4a1216"
+            stroke-width="2"
+          />
+
+          <circle
+            cx="80"
+            cy="66"
+            r="12"
+            fill="#5e1e28"
+          />
+
+          <rect
+            x="20"
+            y="40"
+            width="18"
+            height="12"
+            rx="2"
+            fill="#c9a24b"
+            stroke="#4a1216"
+            stroke-width="2"
+          />
+
+          <circle
+            cx="132"
+            cy="42"
+            r="5"
+            fill="#efe3c9"
+            stroke="#4a1216"
+            stroke-width="2"
+          />
+
+        </svg>
+
+      </div>
+
+
+      <!-- Washi tape -->
+
+      <div class="ny-washi"></div>
+
+
+      <!-- 2x2 collage -->
+
+      <div class="ny-collage">
+
+        <div class="ny-collage-grid">
+
+
+          <!-- Photo 1 -->
+
+          <label class="ny-slot" id="ny-slot1">
+
+            <input
+              type="file"
+              accept="image/*"
+              id="ny-file1"
+            >
+
+            <img id="ny-img1" alt="">
+
+            <div class="ny-slot-label">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+
+              add photo
+
+            </div>
+
+          </label>
+
+
+          <!-- Photo 2 -->
+
+          <label class="ny-slot" id="ny-slot2">
+
+            <input
+              type="file"
+              accept="image/*"
+              id="ny-file2"
+            >
+
+            <img id="ny-img2" alt="">
+
+            <div class="ny-slot-label">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+
+              add photo
+
+            </div>
+
+          </label>
+
+
+          <!-- Photo 3 -->
+
+          <label class="ny-slot" id="ny-slot3">
+
+            <input
+              type="file"
+              accept="image/*"
+              id="ny-file3"
+            >
+
+            <img id="ny-img3" alt="">
+
+            <div class="ny-slot-label">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+
+              add photo
+
+            </div>
+
+          </label>
+
+
+          <!-- Photo 4 -->
+
+          <label class="ny-slot" id="ny-slot4">
+
+            <input
+              type="file"
+              accept="image/*"
+              id="ny-file4"
+            >
+
+            <img id="ny-img4" alt="">
+
+            <div class="ny-slot-label">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <circle cx="12" cy="12" r="3.2"/>
+              </svg>
+
+              add photo
+
+            </div>
+
+          </label>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- Tags -->
+
+      <div class="ny-tag ny-new-year">
+        New Year
+      </div>
+
+      <div class="ny-tag ny-sweet">
+        Sweet
+      </div>
+
+      <div class="ny-tag ny-letter">
+        Letter
+      </div>
+
+
+      <!-- Stars -->
+
+      <div class="ny-star ny-star-1">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M12 0l2.9 8.3L24 12l-9.1 3.7L12 24l-2.9-8.3L0 12l9.1-3.7z"
+          />
+        </svg>
+
+      </div>
+
+
+      <div class="ny-star ny-star-2">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M12 0l2.9 8.3L24 12l-9.1 3.7L12 24l-2.9-8.3L0 12l9.1-3.7z"
+          />
+        </svg>
+
+      </div>
+
+
+      <div class="ny-star ny-star-3">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M12 0l2.9 8.3L24 12l-9.1 3.7L12 24l-2.9-8.3L0 12l9.1-3.7z"
+          />
+        </svg>
+
+      </div>
+
+
+      <!-- Flower -->
+
+      <div class="ny-flower">
+
+        <svg
+          viewBox="0 0 200 180"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <g>
+
+            <path
+              d="M60 150 C40 120 30 90 55 60 C70 90 65 120 60 150Z"
+              fill="#7c1f24"
+            />
+
+            <path
+              d="M40 140 C15 120 10 95 35 75 C45 100 45 122 40 140Z"
+              fill="#9c2a2a"
+            />
+
+            <path
+              d="M85 145 C100 115 100 90 75 65 C65 95 70 120 85 145Z"
+              fill="#5e1218"
+            />
+
+          </g>
+
+
+          <g>
+
+            <ellipse
+              cx="130"
+              cy="70"
+              rx="26"
+              ry="14"
+              fill="#8a1f1f"
+              transform="rotate(20 130 70)"
+            />
+
+            <ellipse
+              cx="150"
+              cy="90"
+              rx="26"
+              ry="14"
+              fill="#9c2a2a"
+              transform="rotate(-15 150 90)"
+            />
+
+            <ellipse
+              cx="120"
+              cy="95"
+              rx="24"
+              ry="13"
+              fill="#7c1f24"
+              transform="rotate(60 120 95)"
+            />
+
+            <ellipse
+              cx="145"
+              cy="60"
+              rx="22"
+              ry="12"
+              fill="#a83232"
+              transform="rotate(-45 145 60)"
+            />
+
+            <circle
+              cx="134"
+              cy="80"
+              r="10"
+              fill="#c9a24b"
+            />
+
+          </g>
+
+        </svg>
+
+      </div>
+
+
+      <!-- Quote -->
+
+      <div class="ny-quote">
+
+        &ldquo;We step into a new year, not as perfect souls,
+        but as hopeful ones.&rdquo;
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         RIGHT SIDE
+         ===================================================== -->
+
+    <div class="ny-right">
+
+      <div class="ny-letter-paper">
+
+
+        <!-- Flourish -->
+
+        <svg
+          class="ny-flourish ny-flourish-tl"
+          viewBox="0 0 40 40"
+        >
+          <path
+            d="M2 2 Q2 20 20 20 Q2 20 2 38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          />
+        </svg>
+
+
+        <svg
+          class="ny-flourish ny-flourish-tr"
+          viewBox="0 0 40 40"
+        >
+          <path
+            d="M2 2 Q2 20 20 20 Q2 20 2 38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          />
+        </svg>
+
+
+        <!-- Seal -->
+
+        <svg
+          class="ny-seal"
+          viewBox="0 0 60 60"
+        >
+
+          <circle
+            cx="30"
+            cy="30"
+            r="26"
+            fill="#7c1f24"
+            stroke="#4a1216"
+            stroke-width="2"
+          />
+
+          <path
+            d="M30 42 C18 32 14 22 22 17 C26 15 30 18 30 22 C30 18 34 15 38 17 C46 22 42 32 30 42Z"
+            fill="#efe3c9"
+          />
+
+        </svg>
+
+
+        <!-- Stamp -->
+
+        <div class="ny-stamp">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#7c1f24"
+            stroke-width="1.6"
+          >
+
+            <path
+              d="M12 21s-7-6-9-10a5 5 0 0 1 9-4 5 5 0 0 1 9 4c-2 4-9 10-9 10z"
+            />
+
+          </svg>
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <h1 class="ny-heading">
+          Dear Oza..
+        </h1>
+
+
+        <!-- Letter -->
+
+        <div class="ny-body">
+
+          <p>
+            Oja, sebelumnya aku mau ucapin terimakasih yang sebesar
+            besarnya karna kamu udah bisa bertahan sejauh ini.
+            Bisa tumbuh menjadi orang hebat yang punya rasa kepedulian
+            dan cinta kasih yang besar.
+            Terimakasih jugaada udah mau jadi nyemans-nyimunss aku,
+            yang bisa ngertiin situasi aku, mau perduli ke aku,
+            mau jadi tempat cerita aku, padahal kalau di ingat aku
+            selalu jarang balas pesan km, tapi kmu ga pernah lupa
+            sama aku, jadi aku berterimakasih untuk itu semuanya.
+          </p>
+
+          <p>
+            Kedepannya kalau ada apa apa call-call aku aja ya.
+            Karna aku juga bisa berkedebak kedebukk seperti pembegar
+            &mdash;tapi versi tinggal di kayangannya.
+            Kamu kalau capek, langsung istirahat ya.
+            Jangan juga kamu paksain diri kamu ngelakuin hal yang
+            ga kamu suka.
+          </p>
+
+          <p>
+            Kalau mau nangis juga nangis aja, ga apaaa.
+            Aku berharap tahun ini menjadi tahun yang terbaikk
+            buat kamu.
+            Kamu semakin di kelilingi orang baik, kamu sehat dan
+            kebahagiaan selalu mengikuti langkah kamu
+            (nanti kalau aku punya niataaaan gedee,
+            kita buat pspsps lagi yaaaa).
+            Happy new year, panglima Bandung.
+            Aku sayang km so much! &#9825;
+          </p>
+
+        </div>
+
+
+        <!-- Signature -->
+
+        <div class="ny-signature">
+          With Love; Cameeya
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Hint -->
+
+  <div class="ny-hint">
+    click any photo area to add your own picture — everything else is ready to go
+  </div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   PHOTO UPLOAD SYSTEM
+   All IDs are prefixed with ny- so they won't conflict
+   with JavaScript from your other pages.
+   ========================================================= */
+
+(function () {
+
+  const root = document.getElementById("new-year-letter");
+
+  if (!root) return;
+
+
+  function wireSlot(fileId, imgId) {
+
+    const fileInput = root.querySelector("#" + fileId);
+    const img = root.querySelector("#" + imgId);
+
+    if (!fileInput || !img) return;
+
+    const slot = img.closest(".ny-slot");
+
+    if (!slot) return;
+
+
+    fileInput.addEventListener("change", function (event) {
+
+      const file = event.target.files[0];
+
+      if (!file) return;
+
+
+      /* Make sure it is actually an image */
+
+      if (!file.type.startsWith("image/")) {
+        alert("Please select an image.");
+        return;
+      }
+
+
+      const reader = new FileReader();
+
+
+      reader.onload = function (event) {
+
+        img.src = event.target.result;
+
+        slot.classList.add("has-img");
+
+      };
+
+
+      reader.readAsDataURL(file);
+
+    });
+
+  }
+
+
+  /* Connect all five photo slots */
+
+  ["1", "2", "3", "4", "Bg"].forEach(function (number) {
+
+    wireSlot(
+      "ny-file" + number,
+      "ny-img" + number
+    );
+
+  });
+
+
+  /* Clicking photo area opens file picker */
+
+  root.querySelectorAll(".ny-slot").forEach(function (slot) {
+
+    slot.addEventListener("click", function (event) {
+
+      if (event.target.tagName === "INPUT") return;
+
+      const input = slot.querySelector(
+        'input[type="file"]'
+      );
+
+      if (input) {
+        input.click();
+      }
+
+    });
+
+  });
+
+})();
+
+</script>
+
+</body>
+</html>
+```
+
 
     <!-- THE LITTLE THINGS -->
     <section class="little-things">
