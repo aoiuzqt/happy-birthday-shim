@@ -458,5 +458,154 @@ updateMusicUI();
   }
 
 })();
+/* =========================================================
+   PHOTO UPLOAD SYSTEM
+   All IDs are prefixed with ny- so they won't conflict
+   with JavaScript from your other pages.
+   ========================================================= */
+
+(function () {
+
+  const root = document.getElementById("new-year-letter");
+
+  if (!root) return;
+
+
+  function wireSlot(fileId, imgId) {
+
+    const fileInput = root.querySelector("#" + fileId);
+    const img = root.querySelector("#" + imgId);
+
+    if (!fileInput || !img) return;
+
+    const slot = img.closest(".ny-slot");
+
+    if (!slot) return;
+
+
+    fileInput.addEventListener("change", function (event) {
+
+      const file = event.target.files[0];
+
+      if (!file) return;
+
+
+      /* Make sure it is actually an image */
+
+      if (!file.type.startsWith("image/")) {
+        alert("Please select an image.");
+        return;
+      }
+
+
+      const reader = new FileReader();
+
+
+      reader.onload = function (event) {
+
+        img.src = event.target.result;
+
+        slot.classList.add("has-img");
+
+      };
+
+
+      reader.readAsDataURL(file);
+
+    });
+
+  }
+
+
+  /* Connect all five photo slots */
+
+  ["1", "2", "3", "4", "Bg"].forEach(function (number) {
+
+    wireSlot(
+      "ny-file" + number,
+      "ny-img" + number
+    );
+
+  });
+
+
+  /* Clicking photo area opens file picker */
+
+  root.querySelectorAll(".ny-slot").forEach(function (slot) {
+
+    slot.addEventListener("click", function (event) {
+
+      if (event.target.tagName === "INPUT") return;
+
+      const input = slot.querySelector(
+        'input[type="file"]'
+      );
+
+      if (input) {
+        input.click();
+      }
+
+    });
+
+  });
+
+})();
+const spreads=[...document.querySelectorAll('.spread')];
+const total=spreads.length;
+let current=0;
+const prevBtn=document.getElementById('prevBtn');
+const nextBtn=document.getElementById('nextBtn');
+const prevEdge=document.getElementById('prevEdge');
+const nextEdge=document.getElementById('nextEdge');
+const counter=document.getElementById('counter');
+const progressBar=document.getElementById('progressBar');
+
+function layout(){
+  spreads.forEach((s,i)=>{
+    s.style.zIndex=i<current?total+i:total-i;
+    s.classList.toggle('flipped',i<current);
+  });
+  counter.textContent=String(current+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
+  progressBar.style.width=((current+1)/total*100)+'%';
+  prevBtn.disabled=current===0;
+  nextBtn.disabled=current===total-1;
+}
+function goTo(i){if(i<0||i>=total||i===current)return;current=i;layout()}
+function next(){if(current<total-1){current++;layout()}}
+function prev(){if(current>0){current--;layout()}}
+prevBtn.onclick=prev;nextBtn.onclick=next;prevEdge.onclick=prev;nextEdge.onclick=next;
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()});
+
+// Page photo slots: click any slot and choose a local image.
+document.querySelectorAll('.photo-slot').forEach(slot=>{
+  const input=slot.querySelector('input[type=file]');
+  const img=slot.querySelector('img');
+  if(!input||!img)return;
+  slot.addEventListener('click',e=>{if(e.target===input)return;input.click()});
+  input.addEventListener('change',()=>{
+    const file=input.files?.[0];
+    if(!file)return;
+    const reader=new FileReader();
+    reader.onload=ev=>{img.src=ev.target.result;slot.classList.add('has-photo')};
+    reader.readAsDataURL(file);
+  });
+});
+
+// Secret note interaction.
+const secretButton=document.getElementById('secretButton');
+const secretNote=document.getElementById('secretNote');
+if(secretButton&&secretNote){
+  secretButton.addEventListener('click',()=>{
+    secretNote.classList.add('open');
+    secretButton.style.opacity='0';
+    secretButton.style.pointerEvents='none';
+  });
+}
+
+// Prevent editable text from accidentally turning a page when clicking inside it.
+document.querySelectorAll('[contenteditable="true"]').forEach(el=>el.addEventListener('click',e=>e.stopPropagation()));
+
+layout();
+
 
 
