@@ -125,12 +125,15 @@ if(ls.get('for-her-playing')==='true')au.play().catch(()=>{});ui()})();
 pit=-.28;zoom=1.45;
 let p=0,hold=false,done=false,last=0,aim=false,pulses=0,raf=0;const kick=()=>{if(!raf){last=performance.now();raf=requestAnimationFrame(tick)}};
 const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const openLanterns=new URLSearchParams(window.location.search).has('lanterns');
 function rip(x,y){const r=document.createElement('span');r.className='rip';r.style.left=x+'px';r.style.top=y+'px';document.body.appendChild(r);r.addEventListener('animationend',()=>r.remove())}
 function tick(now){raf=0;if(done)return;const dt=Math.min(.1,(now-last)/1000||.016);last=now;
  p=hold?Math.min(1,p+dt/1.15):Math.max(0,p-dt*1.4);
  orb.style.setProperty('--p',p);orb.querySelector('.core').style.setProperty('--s',1+p*1.4);
  if(p>=1)return enter();if(hold||p>0)raf=requestAnimationFrame(tick)}
-function enter(){if(done)return;done=true;door.classList.add('go');document.body.classList.remove('pre');
+function enter(){if(done)return;
+ if(window.top!==window.self){window.top.location.href='wishes_meadow.html?lanterns=1';return}
+ done=true;door.classList.add('go');document.body.classList.remove('pre');
  try{const a=document.getElementById('audio');if(a&&a.paused)a.play().catch(()=>{})}catch(e){}
  aim=true;const t0=performance.now(),p0=pit,z0=zoom,P1=.22,Z1=1;
  setTimeout(()=>{(function step(n){if(!aim)return;const k=Math.min(1,(n-t0-900)/4200);if(k>=0){const e=1-Math.pow(1-k,3);pit=p0+(P1-p0)*e;zoom=z0+(Z1-z0)*e}if(k<1)requestAnimationFrame(step);else aim=false})(performance.now())},0);
@@ -140,6 +143,7 @@ orb.addEventListener('pointerdown',e=>{e.preventDefault();orb.setPointerCapture(
 ['pointerup','pointercancel'].forEach(t=>orb.addEventListener(t,()=>{if(hold&&!done&&p<.35&&++pulses>=1)cue.textContent='Keep holding\u2026 a little longer.';hold=false;if(!done)kick()}));
 orb.addEventListener('click',e=>{if(e.detail===0)enter()});
 door.addEventListener('contextmenu',e=>e.preventDefault());
+if(openLanterns){done=true;pit=.1;zoom=.82;document.body.classList.remove('pre');door.remove()}
 orb.focus({preventScroll:true});
 })();
 

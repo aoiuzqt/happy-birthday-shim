@@ -753,3 +753,21 @@ orb.addEventListener('click',e=>{if(e.detail===0)enter()});
 door.addEventListener('contextmenu',e=>e.preventDefault());
 orb.focus({preventScroll:true});
 })();
+/* =========================================================
+
+
+/* -------------------------------------------------
+   Lantern interaction – navigate to lantern.html
+   ------------------------------------------------- */
+(function () {
+  // Assuming the lantern button has id="lanternBtn"
+  // If the element has a different ID, replace accordingly.
+  const lanternBtn = document.getElementById('lanternBtn');
+
+  if (lanternBtn) {
+    lanternBtn.addEventListener('click', () => {
+      // Navigate to the new page after the user holds/activates the light
+      window.location.href = 'lantern.html';
+    });
+  }
+})();

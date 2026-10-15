@@ -27,6 +27,7 @@ button{font:inherit;cursor:pointer}
 button:focus-visible,.back:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .top{position:fixed;right:max(18px,4vw);top:calc(env(safe-area-inset-top,0px) + 18px);display:flex;gap:16px;align-items:center;z-index:5}
 .back,#mt{font-family:var(--ui);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#f2e9dcdd;text-decoration:none;background:none;border:0;padding:6px 2px;text-shadow:0 2px 12px #000}
+.back{padding:9px 12px;border:1px solid #f2e9dc66;border-radius:999px;background:#0005}
 .back:hover,#mt:hover{color:#fff}
 #mt[aria-pressed=true]{color:var(--rose)}
 @media(max-width:640px){.back span{display:none}header{max-width:62vw}}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lantern Light</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#111;color:#eee;}
+    .back-btn {position:fixed;top:1rem;left:1rem;padding:.5rem 1rem;background:#222;border:none;color:#fff;cursor:pointer;}
+  </style>
+</head>
+<body>
+  <button class="back-btn" id="backBtn">← Back</button>
+  <h1>🔦 Lantern Light</h1>
+  <p>Enjoy the lantern glow! Scroll down or click the button to go back.</p>
+
+  <script>
+    // Clicking the back button returns to the original page (index.html)
+    document.getElementById('backBtn').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
+    // Optional: when the user scrolls to the bottom, go back automatically
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</body>
+</html>
