@@ -12,6 +12,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Italianno&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+```
 <style>
 
 
@@ -164,34 +168,34 @@
     <section class="little-things letter-to-you" aria-labelledby="letter-to-you-title">
       <div class="letter-to-you-card" data-reveal>
         <div class="letter-paper">
-          <h2 id="letter-to-you-title">Few things to tell you.</h2>
+          <h2 id="letter-to-you-title">Lets start with this one.</h2>
           <div class="letter-copy" contenteditable="true" spellcheck="false" aria-label="Editable letter">
-            <p>To my favorite person,</p>
-            <p>Happy birthday!!. Thank you for staying, loving me, and making every ordinary day feel special. I hope we keep choosing each other, no matter how many years pass.</p>
-            <p>Love, Your Person</p>
+            <p>To you ,</p>
+            <p>And here you are, eighteen. Happy Birthday! When we first met, you were literally just a 15-16 kid and now look at you all grown up. So much has happened so much has changed, and here you are, stepping into a whole new chapter of life. Adulthood isn't as peaceful as it sounds, trust me. Sure, you can go wherever you want and do whatever you like even commit a crime and be tried as an adult now :D but then come the stress, the responsibilities, nd all the other fun stuff. So, enjoy with that! And here's your little gift, something something special to you nd me as well</p>
           </div>
         </div>
 
         <div class="letter-photo-panel">
-          <div class="letter-photo-strip" aria-label="Photo memories">
-            <label class="photo-slot letter-photo">
-              <input type="file" accept="image/*" aria-label="Add photo 1">
-              <span>+ photo</span>
-            </label>
-            <label class="photo-slot letter-photo">
-              <input type="file" accept="image/*" aria-label="Add photo 2">
-              <span>+ photo</span>
-            </label>
-            <label class="photo-slot letter-photo">
-              <input type="file" accept="image/*" aria-label="Add photo 3">
-              <span>+ photo</span>
-            </label>
-            <label class="photo-slot letter-photo">
-              <input type="file" accept="image/*" aria-label="Add photo 4">
-              <span>+ photo</span>
-            </label>
-          </div>
-        </div>
+  <div class="letter-photo-strip" aria-label="Photo memories">
+
+    <div class="photo-slot letter-photo">
+      <img src="assets/Screenshot 2026-10-15 000556.png" alt="Photo memory 1">
+    </div>
+
+    <div class="photo-slot letter-photo">
+      <img src="assets/childhood3.jpeg" alt="Photo memory 2">
+    </div>
+
+    <div class="photo-slot letter-photo">
+      <img src="assets/childhood5.jpeg" alt="Photo memory 3">
+    </div>
+
+    <div class="photo-slot letter-photo">
+      <img src="assets/childhood7.jpeg" alt="Photo memory 4">
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
    
@@ -199,7 +203,7 @@
     <section class="smile">
 
   <div class="photo-slot smile-photo" data-reveal>
-    <img src="assets/2.jpeg" alt="Memory">
+    <img src="assets/5.jpeg" alt="Memory">
   </div>
     <div class="smile-copy" data-reveal>
         <p class="eyebrow">Some things are painted like..</p>
@@ -218,7 +222,7 @@
     <section class="observation">
       <div class="wrap">
         <p class="eyebrow" data-reveal="fade">maybe,</p>
-        <h2 data-reveal>Some things<br>are better <em>felt.</em></h2>
+        <h2 data-reveal>Some things<br>are better <em>felt?.</em></h2>
       </div>
       <span class="mark" aria-hidden="true">&#10045;</span>
     </section>
@@ -238,37 +242,16 @@
 
     <div class="ny-left">
 
+  <!-- Background photo -->
+  <div class="ny-bg-photo ny-slot" id="ny-slotBg">
 
-      <!-- Background photo -->
+    <img
+      id="ny-imgBg"
+      src="./assets/1.jpeg"
+      alt="Background photo"
+    >
 
-      <div class="ny-bg-photo ny-slot" id="ny-slotBg">
-
-        <input
-          type="file"
-          accept="image/*"
-          id="ny-fileBg"
-        >
-
-        <img id="ny-imgBg" alt="">
-
-        <div class="ny-slot-label">
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-          >
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <circle cx="12" cy="12" r="3.2"/>
-            <path d="M8 5l1.5-2h5L16 5"/>
-          </svg>
-
-          add photo
-
-        </div>
-
-      </div>
+  </div>
 
 
       <!-- Bow -->
@@ -409,136 +392,56 @@
 
       <div class="ny-collage">
 
-        <div class="ny-collage-grid">
+  <div class="ny-collage-grid">
+
+    <!-- =========================
+         PHOTO 1
+         ========================= -->
+    <div class="ny-slot" id="ny-slot1">
+  <img
+    src="assets/31.jpeg"
+    style="width:100%; height:100%; object-fit:cover; display:block !important;"
+  >
+</div>
 
 
-          <!-- Photo 1 -->
+    <!-- =========================
+         PHOTO 2
+         ========================= -->
+    <div class="ny-slot" id="ny-slot2">
+  <img
+    src="assets/32.jpeg"
+    style="width:100%; height:100%; object-fit:cover; display:block !important;"
+  >
+</div>
 
-          <label class="ny-slot" id="ny-slot1">
+<!-- =========================
+     PHOTO 3
+     ========================= -->
+<div class="ny-slot" id="ny-slot3">
+  <img
+    id="ny-img3"
+    src="./assets/33.jpeg"
+    alt="Memory 3"
+    style="width:100%; height:100%; object-fit:cover; display:block;"
+  >
+</div>
 
-            <input
-              type="file"
-              accept="image/*"
-              id="ny-file1"
-            >
+<!-- =========================
+     PHOTO 4
+     ========================= -->
+<div class="ny-slot" id="ny-slot4">
+  <img
+    id="ny-img4"
+    src="./assets/34.jpeg"
+    alt="Memory 4"
+    style="width:100%; height:100%; object-fit:cover; display:block;"
+  >
+</div>
 
-            <img id="ny-img1" alt="">
+  </div>
 
-            <div class="ny-slot-label">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <circle cx="12" cy="12" r="3.2"/>
-              </svg>
-
-              add photo
-
-            </div>
-
-          </label>
-
-
-          <!-- Photo 2 -->
-
-          <label class="ny-slot" id="ny-slot2">
-
-            <input
-              type="file"
-              accept="image/*"
-              id="ny-file2"
-            >
-
-            <img id="ny-img2" alt="">
-
-            <div class="ny-slot-label">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <circle cx="12" cy="12" r="3.2"/>
-              </svg>
-
-              add photo
-
-            </div>
-
-          </label>
-
-
-          <!-- Photo 3 -->
-
-          <label class="ny-slot" id="ny-slot3">
-
-            <input
-              type="file"
-              accept="image/*"
-              id="ny-file3"
-            >
-
-            <img id="ny-img3" alt="">
-
-            <div class="ny-slot-label">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <circle cx="12" cy="12" r="3.2"/>
-              </svg>
-
-              add photo
-
-            </div>
-
-          </label>
-
-
-          <!-- Photo 4 -->
-
-          <label class="ny-slot" id="ny-slot4">
-
-            <input
-              type="file"
-              accept="image/*"
-              id="ny-file4"
-            >
-
-            <img id="ny-img4" alt="">
-
-            <div class="ny-slot-label">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-              >
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <circle cx="12" cy="12" r="3.2"/>
-              </svg>
-
-              add photo
-
-            </div>
-
-          </label>
-
-
-        </div>
-
-      </div>
+</div>
 
 
       <!-- Tags -->
@@ -790,34 +693,19 @@ for a smile to find its way upon my face..&rdquo;
         <div class="ny-body">
 
           <p>
-            Oja, hari ini adalah tentang kamu — tentang satu tahun lagi
-            yang berhasil kamu lewati, tentang semua hal yang sudah kamu
-            pelajari, semua cerita yang sudah kamu jalani, dan semua versi
-            dirimu yang berhasil kamu tumbuhkan sampai hari ini.
+            I don't even know what I'm supposed to write to you. There are so many things I've never said, so many things I've felt but never really found the words for. I've always told you that you're special to me but I've never told you why? What makes someone so special to another person? Is it their efforts, the way they behave, the way they listen or perhaps the little things they do without even realising how much they mean. Maybe it's all of that or maybe it's something that words will never quite be able to explain. There are so many moments with you that still lives somewhere in the back of my mind, and despite having so much to say here I am struggling to write even a single word. It's October 15th and perhaps I should've started writing this earlier but after overthinking every little thing a hundred times I'm finally here. Idk if I'll get everything right, if I'll say something unusual or if these words will even do justice to what I feel, but I suppose some things deserves to be written even when we don't know where to begin.
           </p>
 
           <p>
-            Terima kasih sudah menjadi orang yang selalu punya rasa peduli
-            dan cinta kasih yang besar. Semoga di umur yang baru ini kamu
-            selalu dikelilingi orang-orang baik, punya banyak alasan untuk
-            tersenyum, dan menemukan lebih banyak hal yang membuat kamu
-            benar-benar bahagia.
+           Let's start with how we met shall we? Two selenophiles, brought together by something as ordinary as a conversation. I remember thinking of texting you, though at first you were actually someone else I had intended to talk to. We ended our conversation and then out of nowhere you sent me a random reel. To this day I don't know whether it was a mistake or something you sent without a second thought but I'm glad you did. Cause somehow that little insignificant moment became the beginning of something I would come to cherish so deeply. The more I got to know you the more I discovered how alike we were. We shared the same music taste, the same interests and even the same dreams of becoming something someday. Sometimes I'd find myself thinking about something only to realise that you'd thought about it too, perhaps a little later but still. It felt as though I had found someone who understood parts of me that I never really knew how to explain. And somewhere along the way I found my "anam cara" someone who made me feel like perhaps I didn't have to spend another four years trying to find a connection like this. And the strange thing is even after all this time that feeling hasn't changed.
           </p>
 
           <p>
-            Kalau suatu hari kamu capek, istirahat ya. Kalau mau nangis,
-            nangis aja, ga apaaa. Kamu ga harus selalu kuat setiap saat.
-            Semoga semua hal yang kamu semogakan pelan-pelan menemukan
-            jalannya, dan semoga tahun ini membawa banyak cerita indah
-            yang nantinya bisa kita ingat sambil ketawa.
+            I've never forgotten the efforts you've made, the way you've treated me or the little things you've done that you probably don't even remember anymore. Perhaps you never realised how much they meant to me but I did. I remember them and I think a part of me always will. Maybe that's what makes someone special, not one grand gesture or a thousand beautiful words but the way they make you feel through the smallest things. The way they listen without making you feel foolish for speaking, the way they let you explain yourself without passing judgement and the way they make you feel heard when the rest of the world seems too busy to listen. Maybe it's knowing that even after disagreements, misunderstandings and arguments there's still a part of you that holds on to the bond you've built. I don't think I've ever been particularly good at explaining myself and perhaps I'll never find the courage to tell someone everything that goes on inside my head. But with you I found someone I could try with. Someone whose presence made the world feel a little less unfamiliar. And maybe without even realising it you became one of those rare people whose existence changes the way you look at friendship itself.
           </p>
 
           <p>
-            So, here's to another year of you — another year of memories,
-            random conversations, little moments, and hopefully banyak
-            hal baik yang datang tanpa kamu duga.
-            Happy birthday, panglima Bandung.
-            Aku sayang km so much! &#9825;
+            And perhaps that's why even after fivee years or more I still feel the same. I don't know what the future has written for us or how many more arguments, misunderstandings, distances or changes life has waiting around the corner. But I know that the time we've spent together means something to me and I know there are still so many moments we haven't lived yet. If I were asked to close my eyes and think about the people who have left a mark on my life, I have no doubt you'd find a place among those final seven minutes of memories. Maybe we haven't spent as much time together as we would've liked, maybe there are things we've never said and moments we wish had lasted a little longer but we have our little collection of memories and I'm grateful for every one of them. So on your eighteenth birthday I hope life gives you a thousand reasons to smile, takes you closer to every dream you've ever held and brings you the kind of happiness that stays long after the moment has passed. And if there's one thing I want you to know it's that among all the people I've met and all the connections I've made, you'll always be my anam cara, the friend who made an ordinary conversation feel like the beginning of something I never knew I was looking for. Happy birthday you little human. I'm glad that random reel found its way to me. &#9825;
           </p>
 
         </div>
@@ -850,16 +738,17 @@ for a smile to find its way upon my face..&rdquo;
    <!-- SOMETHING I MADE FOR YOU -->
     <section class="beauty">
       <div class="wrap">
-        <p class="eyebrow" data-reveal="fade">SOMETHING I MADE FOR YOU</p>
+        <p class="eyebrow" data-reveal="fade">SOMETHING MADE ONLY FOR YOU</p>
         <div class="beauty-grid" data-reveal>
           <div>
-            <p class="eyebrow" style="margin-bottom:14px;">A little observation</p>
-            <h2 class="beauty-heading">YOUR<span class="flourish">Beauty</span></h2>
+            <p class="eyebrow" style="margin-bottom:14px;"> </p>
+            <h2 class="beauty-heading">HERES<span class="flourish">Something</span></h2>
           </div>
           <div class="beauty-side">
             <span class="mark" aria-hidden="true">&#10045;</span>
-            nothing here is accidental.<br>
-            every frame is a memory.
+            Nothing here is accidental; every frame holds a memory, <br>
+            every detail carries a feeling,<br>
+            and every little thing has a story that belongs to you. <br>
           </div>
         </div>
         <p class="beauty-caption" data-reveal="fade">the moments, the memories, the things that makes you.. you!!.</p>
@@ -875,29 +764,57 @@ for a smile to find its way upon my face..&rdquo;
 
 
     <!-- A FEW FRAMES -->
-    <section class="frames">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal="fade">A few frames</p>
-        <h2 data-reveal>you, being <em>you.</em></h2>
-        <div class="collage">
-          <label class="photo-slot" data-slot>
-            <span class="slot-label">Photo</span>
-            <input type="file" accept="image/*">
-          </label>
-          <label class="photo-slot" data-slot>
-            <span class="slot-label">Photo</span>
-            <input type="file" accept="image/*">
-          </label>
-          <label class="photo-slot" data-slot>
-            <span class="slot-label">Photo</span>
-            <input type="file" accept="image/*">
-          </label>
-          <span class="collage-note n1">favorite.</span>
-          <span class="collage-note n2">look at you &hearts;</span>
-          <span class="collage-note n3">this one &gt;&gt;&gt;</span>
-        </div>
+   <section class="frames">
+  <div class="wrap">
+
+    <p class="eyebrow" data-reveal="fade">A few frames</p>
+
+    <h2 data-reveal>
+      you, being <em>you.</em>
+    </h2>
+
+    <div class="collage">
+
+      <!-- PHOTO 1 -->
+      <div class="photo-slot" data-slot>
+        <img
+          src="./assets/10.jpeg"
+          alt="Memory 1"
+        >
       </div>
-    </section>
+
+      <!-- PHOTO 2 -->
+      <div class="photo-slot" data-slot>
+        <img
+          src="./assets/11.jpeg"
+          alt="Memory 2"
+        >
+      </div>
+
+      <!-- PHOTO 3 -->
+      <div class="photo-slot" data-slot>
+        <img
+          src="./assets/13.jpeg"
+          alt="Memory 3"
+        >
+      </div>
+
+
+      <!-- COLLAGE NOTES -->
+      <span class="collage-note n1">something from.</span>
+
+      <span class="collage-note n2">
+        last year &hearts;
+      </span>
+
+      <span class="collage-note n3">
+        this one &gt;&gt;&gt;
+      </span>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- PRESS PLAY -->
     
@@ -919,7 +836,7 @@ for a smile to find its way upon my face..&rdquo;
   <header class="site-head">
     <div class="eyebrow">A small archive of us</div>
     <div class="brand">A Letter to You</div>
-    <div class="head-date">17 — 08 — 2026</div>
+    <div class="head-date">16 — 08 — 2026</div>
   </header>
 -->
 
@@ -932,15 +849,15 @@ for a smile to find its way upon my face..&rdquo;
           <div class="grain"></div>
           <img class="decor flower flower-cover" src="assets/decorations/flower.png" alt="">
           <img class="decor music music-cover" src="assets/decorations/music_ribbon.png" alt="">
-          <div class="stamp">PRIVATE<br>ARCHIVE<br>NO. 01</div>
+          <div class="stamp"> <br> <br> </div>
           <div class="cover-side-note">keep this one.</div>
         </div>
         <div class="page page-right paper-cream cover-right">
           <div class="paper-shadow"></div>
-          <div class="tiny-label">A LETTER, FINALLY WRITTEN</div>
-          <h1>A Letter<br><span>to You</span></h1>
+          <div class="tiny-label">de moi `a toi</div>
+          <h1>Scrap book<br><span>for You</span></h1>
           <p class="cover-copy">a few photographs,<br>a few memories,<br>and everything I couldn't fit into a text.</p>
-          <div class="cover-date">17 · 08 · 2026</div>
+          <div class="cover-date">16 · 08 · 2026</div>
           <div class="open-note">click the page<br>or use →</div>
           <img class="decor floral-cover" src="assets/decorations/floral_postcard.png" alt="">
         </div>
@@ -952,11 +869,11 @@ for a smile to find its way upon my face..&rdquo;
           <div class="page-number">01</div>
           <div class="tape tape-a"></div>
           <div class="tiny-label">THE FIRST PAGE</div>
-          <h2>Dear you,</h2>
-          <p class="letter-text editable" contenteditable="true">I never really know how to begin things like this. So I thought I'd stop trying to make it perfect and just make it honest.</p>
-          <p class="letter-text editable" contenteditable="true">There are people who pass through your life, and then there are people who quietly become part of it. Somehow, you became one of my favourite parts.</p>
-          <p class="letter-text editable" contenteditable="true">So this is a little place for the moments I don't want to forget — the ordinary ones, the ridiculous ones, and the ones that still make me smile for no particular reason.</p>
-          <div class="signature editable" contenteditable="true">— me, probably overthinking this</div>
+          <h2>Shim </h2>
+          <p class="letter-text editable" contenteditable="true">I wish I could give you real flowers right now, a bouquet of lilies, perhaps, just to see you hold something beautiful that was meant entirely for you. Not because you asked for them, but because I wanted to be the one to give them to you. You’re eighteen, and somehow, you’ve made it this far without someone placing a flower in your hands? How terribly unfair of the world.</p>
+          <p class="letter-text editable" contenteditable="true">And how unfortunate that I can’t fix that just yet, living miles away from you, with nothing but words and little things I can send across the distance. Maybe one random day, I’ll surprise you with a lily, or perhaps I’ll save that little wish for whenever we finally meet.</p>
+          <p class="letter-text editable" contenteditable="true">Until then, let this be my little substitute for the flowers I cannot give you yet. A bouquet made of pixels instead of petals, but carrying a real wish all the same that someday, you’ll have flowers in your hands and know that someone thought you deserved them long before they could bring them to you..</p>
+          <div class="signature editable" contenteditable="true">-from me, until real patels find their way to you</div>
           <img class="decor flower flower-letter" src="assets/decorations/flower.png" alt="">
         </div>
         <div class="page paper-dark letter-bouquet-page">
@@ -977,7 +894,7 @@ for a smile to find its way upon my face..&rdquo;
         <div class="page paper-blush collage-page">
           <div class="tiny-label">THE LITTLE THINGS</div>
           <h2 class="editorial-title">Things that<br><em>stayed.</em></h2>
-          <div class="note-card note-1 editable" contenteditable="true">the way you laugh at your own jokes.</div>
+          <div class="note-card note-1 editable" contenteditable="true">i lovw when u talk abt something u really like</div>
           <div class="note-card note-2 editable" contenteditable="true">the random conversations that somehow become hours.</div>
           <div class="note-card note-3 editable" contenteditable="true">the tiny things you probably don't realise I notice.</div>
           <img class="decor saturn" src="assets/decorations/saturn.png" alt="">
@@ -988,9 +905,9 @@ for a smile to find its way upon my face..&rdquo;
           <img class="camera-art" src="assets/decorations/camera.png" alt="vintage camera">
           <div class="camera-caption"><span>THROUGH THE LENS</span><br>some moments deserve<br>to be kept exactly as they were.</div>
           <div class="photo-mini-grid">
-            <div class="photo-slot mini" data-label="photo 01"><input type="file" accept="image/*" hidden><img src="" alt=""><span>+</span></div>
-            <div class="photo-slot mini" data-label="photo 02"><input type="file" accept="image/*" hidden><img src="" alt=""><span>+</span></div>
-            <div class="photo-slot mini" data-label="photo 03"><input type="file" accept="image/*" hidden><img src="" alt=""><span>+</span></div>
+            <div class="photo-slot mini" data-label="photo 01"><img src="assets/14.jpeg" alt="Photo 01"><span>+</span></div>
+            <div class="photo-slot mini" data-label="photo 02"><img src="assets/16.jpeg" alt="Photo 02"><span>+</span></div>
+            <div class="photo-slot mini" data-label="photo 03"><img src="assets/17.jpeg" alt="Photo 03"><span>+</span></div>
           </div>
         </div>
       </section>
@@ -1001,14 +918,14 @@ for a smile to find its way upon my face..&rdquo;
           <div class="tiny-label light-label">A FEW FRAMES</div>
           <div class="wall-title">You, in<br><span>little pieces.</span></div>
           <img class="decor violin" src="assets/decorations/violin.png" alt="">
-          <div class="hand-note light">no particular order.<br>that's the point.</div>
+          <div class="hand-note light">no particular order ur always best.<br>& that's the whole point.</div>
         </div>
         <div class="page paper-warm photo-wall-right">
           <div class="photo-cluster">
-            <div class="photo-polaroid tilt-left photo-slot" data-label="photo one"><input type="file" accept="image/*" hidden><img src="" alt=""><span>photo one</span></div>
-            <div class="photo-polaroid tilt-right photo-slot" data-label="photo two"><input type="file" accept="image/*" hidden><img src="" alt=""><span>photo two</span></div>
-            <div class="photo-polaroid tilt-small photo-slot" data-label="photo three"><input type="file" accept="image/*" hidden><img src="" alt=""><span>photo three</span></div>
-            <div class="photo-polaroid center-shot photo-slot" data-label="photo four"><input type="file" accept="image/*" hidden><img src="" alt=""><span>photo four</span></div>
+            <div class="photo-polaroid tilt-left photo-slot" data-label="photo one"><img src="assets/19.jpeg" alt="Photo one"><span>photo one</span></div>
+            <div class="photo-polaroid tilt-right photo-slot" data-label="photo two"><img src="assets/20.jpeg" alt="Photo two"><span>photo two</span></div>
+            <div class="photo-polaroid tilt-small photo-slot" data-label="photo three"><img src="assets/21.jpeg" alt="Photo three"><span>photo three</span></div>
+            <div class="photo-polaroid center-shot photo-slot" data-label="photo four"><img src="assets/22.jpeg" alt="Photo four"><span>photo four</span></div>
           </div>
           <img class="decor floral-mini" src="assets/decorations/floral_postcard.png" alt="">
         </div>
@@ -1017,20 +934,20 @@ for a smile to find its way upon my face..&rdquo;
       <!-- 04 PLACES -->
       <section class="spread" data-index="4">
         <div class="page paper-cream travel-page">
-          <div class="tiny-label">PLACES, REAL OR OTHERWISE</div>
-          <h2 class="travel-title">Somewhere<br><em>with you.</em></h2>
-          <div class="postcard-text editable" contenteditable="true">I don't think the place has ever been the important part. Somehow, it is always the person beside you that makes it feel like somewhere worth remembering.</div>
+          <div class="tiny-label">LITTLE THINGS, FROM AFAR</div>
+          <h2 class="travel-title">Until...<br><em>our paths cross.</em></h2>
+          <div class="postcard-text editable" contenteditable="true">I wonder what it’ll feel like when we finally meet. Maybe it won’t be anything extraordinary, just an ordinary day made a little more special by the fact that we’re finally in the same place..</div>
           <img class="decor eiffel" src="assets/decorations/eiffel.png" alt="">
-          <div class="postmark">PARIS<br>LOVE<br>ARCHIVE</div>
+          <div class="postmark">PARIS<br>LOVE<br> </div>
         </div>
         <div class="page paper-blush travel-photo-page">
           <div class="travel-card">
             <div class="travel-card-top">POSTCARD FROM</div>
             <div class="travel-card-big editable" contenteditable="true">wherever<br>we are.</div>
             <div class="travel-lines"></div>
-            <div class="travel-card-small editable" contenteditable="true">wish you were here.<br>— actually, you are.</div>
+            <div class="travel-card-small editable" contenteditable="true">wish you were here.<br> </div>
           </div>
-          <div class="photo-slot travel-photo" data-label="place / memory"><input type="file" accept="image/*" hidden><img src="" alt=""><span>add a place / memory</span></div>
+          <div class="photo-slot travel-photo" data-label="place / memory"><img src="assets/eyes.jpeg" alt="Place / memory"><span>add a place / memory</span></div>
         </div>
       </section>
 
@@ -1041,7 +958,7 @@ for a smile to find its way upon my face..&rdquo;
           <h2 class="music-title">Songs that<br><em>feel like you.</em></h2>
           <img class="decor music-ribbon-page" src="assets/decorations/music_ribbon.png" alt="">
           <img class="decor violin-small" src="assets/decorations/violin.png" alt="">
-          <div class="music-note">press play in your head.<br>you know the song.</div>
+          <div class="music-note">press play in your head.<br>you know the song no?.</div>
         </div>
         <div class="page paper-cream songs-page">
           <div class="vinyl-record"><div class="record-label">A<br>TO<br>YOU</div></div>
@@ -1049,7 +966,7 @@ for a smile to find its way upon my face..&rdquo;
             <div class="song editable" contenteditable="true"><b>01</b> song that reminds me of you <span>♡</span></div>
             <div class="song editable" contenteditable="true"><b>02</b> the one we always come back to <span>♡</span></div>
             <div class="song editable" contenteditable="true"><b>03</b> the one for late nights <span>♡</span></div>
-            <div class="song editable" contenteditable="true"><b>04</b> the one you secretly love <span>♡</span></div>
+            <div class="song editable" contenteditable="true"><b>04</b> the one you love <span>♡</span></div>
           </div>
           <div class="song-foot editable" contenteditable="true">every good story needs a soundtrack.</div>
         </div>
@@ -1058,17 +975,17 @@ for a smile to find its way upon my face..&rdquo;
       <!-- 06 FILM -->
       <section class="spread" data-index="6">
         <div class="page paper-warm film-page">
-          <div class="tiny-label">ROLL 01 · UNDEVELOPED</div>
-          <h2>Scenes from<br><em>our little universe.</em></h2>
+          <div class="tiny-label"> </div>
+          <h2>GLIMPSES<br><em>of your world.</em></h2>
           <img class="filmstrip-art" src="assets/decorations/filmstrip.png" alt="film strip">
-          <div class="film-copy editable" contenteditable="true">Some memories are blurry. That's okay. The feeling usually isn't.</div>
+          <div class="film-copy editable" contenteditable="true"> And Not every memory has a photograph. Some are just little things that stay with you in your heart.</div>
         </div>
         <div class="page paper-cream film-gallery">
-          <div class="film-frame photo-slot" data-label="frame 01"><input type="file" accept="image/*" hidden><img src="" alt=""><span>frame 01</span></div>
-          <div class="film-frame photo-slot" data-label="frame 02"><input type="file" accept="image/*" hidden><img src="" alt=""><span>frame 02</span></div>
-          <div class="film-frame photo-slot" data-label="frame 03"><input type="file" accept="image/*" hidden><img src="" alt=""><span>frame 03</span></div>
-          <div class="film-frame photo-slot" data-label="frame 04"><input type="file" accept="image/*" hidden><img src="" alt=""><span>frame 04</span></div>
-          <div class="film-caption editable" contenteditable="true">developed with a little bit of nostalgia.</div>
+          <div class="film-frame photo-slot" data-label="frame 01"><img src="assets/23.jpeg" alt="Frame 01"><span>frame 01</span></div>
+          <div class="film-frame photo-slot" data-label="frame 02"><img src="assets/27.jpeg" alt="Frame 02"><span>frame 02</span></div>
+          <div class="film-frame photo-slot" data-label="frame 03"><img src="assets/25.jpeg" alt="Frame 03"><span>frame 03</span></div>
+          <div class="film-frame photo-slot" data-label="frame 04"><img src="assets/26.jpeg" alt="Frame 04"><span>frame 04</span></div>
+          <div class="film-caption editable" contenteditable="true">developed with a little bit of love.</div>
         </div>
       </section>
 
@@ -1076,19 +993,19 @@ for a smile to find its way upon my face..&rdquo;
       <section class="spread" data-index="7">
         <div class="page paper-blush ps-left">
           <img class="decor floral-postcard" src="assets/decorations/floral_postcard.png" alt="">
-          <div class="ps-label">P.S.</div>
-          <div class="ps-big">there's<br>one more<br><em>thing.</em></div>
+          <div class="ps-label"> </div>
+          <div class="ps-big">there's<br>one more<br><em>thing left.</em></div>
           <div class="ps-arrow">↘</div>
         </div>
         <div class="page paper-cream ps-right">
           <div class="letter-fold">
-            <div class="fold-label">OPEN ME</div>
+            <div class="fold-label"> </div>
             <button class="secret-button" id="secretButton">unfold the note</button>
             <div class="secret-note" id="secretNote">
-              <div class="secret-date">17 · 08 · 2026</div>
+              <div class="secret-date">16 · 08 · 2026</div>
               <p class="editable" contenteditable="true">If I had to keep only one thing from all these pages, it wouldn't be a photograph.</p>
               <p class="editable" contenteditable="true">It'd be the feeling of having you in my life.</p>
-              <div class="secret-sign editable" contenteditable="true">still choosing you.</div>
+              <div class="secret-sign editable" contenteditable="true">and still choosing you.</div>
             </div>
           </div>
         </div>
@@ -1098,14 +1015,14 @@ for a smile to find its way upon my face..&rdquo;
       <section class="spread final-spread" data-index="8">
         <div class="page page-left paper-dark final-left">
           <img class="decor saturn-final" src="assets/decorations/saturn.png" alt="">
-          <div class="final-small">THE END OF THE LETTER</div>
-          <div class="final-word">stay.</div>
+          <div class="final-small">THE END OF THE book hehe</div>
+          <div class="final-word">anam cara!.</div>
         </div>
         <div class="page page-right paper-cream final-right">
-          <div class="final-top">A LETTER TO YOU</div>
+          <div class="final-top">A MESSAGE TO YOU</div>
           <h2>And that's<br><em>all I wanted to say.</em></h2>
-          <div class="final-photo photo-slot" data-label="one last photo"><input type="file" accept="image/*" hidden><img src="" alt=""><span>one last photo</span></div>
-          <p class="final-line editable" contenteditable="true">Thank you for being one of the most beautiful parts of my ordinary days.</p>
+          <div class="final-photo photo-slot" data-label="one last photo"><img src="assets/28.jpeg" alt="One last photo"><span>one last photo of you!</span></div>
+          <p class="final-line editable" contenteditable="true">Thank you for being one of the most beautiful parts of my life.</p>
           <div class="final-sign editable" contenteditable="true">with all my love,<br>me ♡</div>
         </div>
       </section>
@@ -1120,7 +1037,7 @@ for a smile to find its way upon my face..&rdquo;
     <div class="progress"><span id="counter">01 / 09</span><div class="progress-line"><i id="progressBar"></i></div></div>
     <button class="nav-btn" id="nextBtn" aria-label="Next">→</button>
   </nav>
-  <div class="hint">click the page · use the arrows · press ← / → · click any photo to add your own</div>
+  <div class="hint"> </div>
   <script src="script.js"></script>
 </body>
 </html>
@@ -1130,33 +1047,27 @@ for a smile to find its way upon my face..&rdquo;
     <!-- LETTER -->
     <section class="letter">
       <div class="wrap">
-        <p class="eyebrow" data-reveal="fade">A letter for you</p>
-        <h2 data-reveal>Hey, you.</h2>
+        <p class="eyebrow" data-reveal="fade"> </p>
+        <h2 data-reveal> Again here one more.</h2>
         <div class="letter-body" data-reveal>
-          <p>I don&rsquo;t know if words will ever be enough to describe how special you are, but I wanted to try anyway.</p>
-          <p>Thank you for being exactly who you are &mdash; for the little moments, the laughter, the conversations, and all the memories that somehow become my favourite ones.</p>
-          <p>On your birthday, I hope you see yourself the way the people who love you see you: rare, beautiful, and impossible to forget.</p>
+          <p>I think there's a kind of beauty that never really learns how to speak for itself. it lives in the little things, in the way someone laughs without thinking, in those little moments that probably meant nothing to the world but somehow stayed with me. i still remember when your mum got to know about me, your sis, even your friends.. and god, i think i really loved being a reason behind your laugh, your smile. maybe that's one of those things i'll always be a little fond of.</p>
+          <p>and perhaps that's what makes you beautiful, not just the things that eyes can see, but all those little things about you that you probably don't even notice yourself. you don't have to be the prettiest person in every room, or have every little thing about yourself figured out. there's something lovely about just being you, with your unfinished thoughts, your random laughs and those smiles you probably don't realise the worth of.</p>
+          <p>nd if you ever forget how beautiful you are, well.. i hope you remember that there's someone who'll always try to make you smile, even on the days when you find it a little hard to. because being your friend has let me see little pieces of you that i think deserve to be reminded of their beauty, again and again..</p>
         </div>
-        <p class="letter-sign" contenteditable="true" spellcheck="false">write your own final paragraph here</p>
+       
       </div>
       <span class="mark" aria-hidden="true">&#10045;</span>
     </section>
 
     <!-- FLOWERS -->
-    <section class="flowers">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal="fade">A little surprise, maybe?</p>
-        <h2 data-reveal>Would you like some <em>flowers?</em></h2>
-        <p class="lede" data-reveal="fade">Leave your address and maybe a small piece of this page will find its way to your door.</p>
-        <form class="flower-form" id="flowerForm" data-reveal>
-          <div class="field">
-            <label for="addr">Your address</label>
-            <input id="addr" type="text" placeholder="where should the flowers go?" required>
-          </div>
-          <button type="submit" class="flower-submit">Send a little hint</button>
-          <p class="flower-status" id="flowerStatus" role="status"></p>
-        </form>
-      </div>
+    <!-- A THOUSAND WISHES -->
+    <section class="meadow-embed-section" aria-label="A Thousand Wishes, Rising">
+      <iframe
+        class="meadow-embed-frame"
+        src="wishes_meadow.html"
+        title="A Thousand Wishes, Rising"
+        loading="eager"
+      ></iframe>
     </section>
 
     <!-- ENVELOPE -->
@@ -1180,11 +1091,37 @@ for a smile to find its way upon my face..&rdquo;
       </div>
     </section>
     <!-- FOOTER -->
-    <footer>
-      <p class="eyebrow" data-reveal="fade">One last thing</p>
-      <p data-reveal="fade">And if you ever forget how spacial you are&hellip; come back here.</p>
-      <p class="signoff" contenteditable="true" spellcheck="false">Happy Birthday, Shihaam!!.</p>
-    </footer>
+
+<!-- ONE LAST THING — FOOTER -->
+<footer class="birthday-footer">
+  <div class="footer-inner">
+
+    <span class="footer-eyebrow"> AND ONE LAST THING</span>
+
+    <div class="footer-ornament" aria-hidden="true">
+      <span></span>
+      <span class="ornament-star"></span>
+      <span></span>
+    </div>
+
+    <h2 class="footer-message">
+      And if you ever forget how
+      special you are...
+      <span class="footer-return">come back here.</span>
+    </h2>
+
+    <a href="#top" class="birthday-signoff">
+      Happy Birthday, Shihaam!!
+    </a>
+
+    <div class="footer-bottom">
+      <span class="footer-heart">♡</span>
+      <span> </span>
+      <span class="footer-heart">♡</span>
+    </div>
+
+  </div>
+</footer>
 
   </main>
 

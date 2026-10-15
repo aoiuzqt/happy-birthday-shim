@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For you maybe something beautfiful?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="wishes_meadow_style.css"></head><body class="pre">
+<canvas id="c" aria-label="A quiet meadow at night with glowing lanterns rising above. Drag to look around."></canvas>
+<div id="door" role="dialog" aria-label="Enter the meadow">
+<p class="eb">16 &mdash; 08 &mdash; 2026 &middot; For her</p>
+<h1>A thousand wishes,<br><em>rising.</em></h1>
+<div id="orbwrap"><button id="orb" type="button" aria-label="Touch and hold the light to enter"><span class="halo"></span><svg viewBox="0 0 150 150"><circle class="tr" cx="75" cy="75" r="65"/><circle class="pg" cx="75" cy="75" r="65"/></svg><span class="core"></span></button></div>
+<p class="cue" id="cue">Touch and hold the light.</p>
+</div>
+<audio id="audio" preload="auto"></audio>
+<div class="top"><a class="back" href="index.html" aria-label="Back to the little story">&larr; <span> </span></a><button id="mt" type="button" aria-pressed="false"><span aria-hidden="true">&#9835;</span> Music</button></div>
+<header><p class="eb">16 &mdash; 08 &mdash; 2026 &middot;</p><h1> <br><em> </em></h1><p class="sub"> </p></header>
+<div id="card" role="status"></div>
+<div id="panel"><div class="row"><input id="wish" maxlength="70" placeholder="I wish for…" autocomplete="off" aria-label="Your wish"><button id="go">Release</button></div><div id="st" aria-live="polite">Write a wish of your own, and let it rise.</div></div>
+<button id="walk" aria-label="Walk forward">▲</button>
+<script src="wishes_meadow_script.js"></script></body></html>
+

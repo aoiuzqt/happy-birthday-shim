@@ -1020,14 +1020,25 @@ footer{
   background: var(--ink);
   color: var(--cream-text);
   text-align: center;
-  padding: 60px var(--gutter) 50px;
+  padding: 70px var(--gutter) 60px;
 }
 footer .eyebrow{ justify-content: center; color: var(--stone); margin-bottom: 16px; }
 footer p{
   font-family: var(--font-display);
-  font-size: clamp(16px, 2vw, 22px);
+  font-size: clamp(18px, 2.2vw, 25px);
   max-width: 560px;
   margin: 0 auto 10px;
+}
+footer .footer-reminder{ max-width: 620px; }
+footer .wedding-word{
+  display: inline-block;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 1.55em;
+  line-height: .55;
+  color: var(--rose);
+  font-weight: 400;
+  transform: rotate(-3deg);
+  margin: 0 .05em;
 }
 footer .signoff{
   font-size: 18px;
@@ -3877,3 +3888,165 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;ba
 .controls{display:flex;align-items:center;gap:22px;margin-top:24px;position:relative;z-index:5}.nav-btn{width:44px;height:44px;border:1px solid rgba(245,237,223,.28);border-radius:50%;background:rgba(245,237,223,.06);color:var(--cream);cursor:pointer;font-size:17px;transition:.2s}.nav-btn:hover{background:rgba(245,237,223,.16);transform:translateY(-2px)}.nav-btn:disabled{opacity:.2;cursor:default;transform:none}.progress{width:210px;text-align:center}.progress span{font-family:'Caveat';font-size:18px;color:var(--blush)}.progress-line{height:1px;background:rgba(245,237,223,.18);margin-top:7px;position:relative}.progress-line i{position:absolute;left:0;top:0;height:1px;width:11%;background:var(--blush);transition:.5s}.hint{font-size:9px;letter-spacing:.08em;text-align:center;color:rgba(245,237,223,.42);margin-top:13px}.edge{position:absolute;top:0;bottom:0;width:14%;background:transparent;border:0;cursor:pointer;z-index:40}.edge-left{left:0}.edge-right{right:0}
 @media(max-width:800px){.bouquet-label{left:22px;top:20px}.bouquet-label span{font-size:21px}.letter-butterfly{width:82px;right:5px;top:20px}.bouquet-note{font-size:12px;right:14px;bottom:18px}.letter-bouquet{width:98%;left:1%;top:15%;height:78%}.bouquet-paper{left:20%;width:60%}.bouquet-ribbon{left:39%;bottom:19%}body{justify-content:flex-start;padding-top:18px}.site-head{margin-bottom:12px}.brand{font-size:43px}.book-stage{width:96vw;height:70vw;min-height:370px}.cover-right{padding:36px 28px}.cover-right h1{font-size:48px}.cover-copy{font-size:15px}.letter-page,.travel-page,.music-page,.songs-page,.film-page,.ps-left,.ps-right,.final-right{padding:30px 25px}.letter-text{font-size:15px}.editorial-title,.travel-title,.music-title{font-size:39px}.wall-title{font-size:39px}.camera-art{width:190px}.photo-cluster .photo-polaroid{width:135px;height:175px}.photo-cluster .photo-polaroid img{height:140px}.photo-cluster .photo-polaroid:nth-child(3){left:60px;width:120px;height:155px}.photo-cluster .photo-polaroid:nth-child(3) img{height:120px}.photo-cluster .photo-polaroid:nth-child(4){right:35px;width:130px;height:165px}.photo-cluster .photo-polaroid:nth-child(4) img{height:130px}.final-word{font-size:78px}.final-photo{height:150px}.vinyl-record{width:125px;height:125px}.record-label{width:42px;height:42px;font-size:6px;padding-top:8px}}
 @media(max-width:560px){body{padding:10px 6px 25px}.eyebrow,.head-date{font-size:8px}.brand{font-size:36px}.book-stage{height:76vw;min-height:300px}.cover-right{padding:23px 18px}.cover-right h1{font-size:34px;margin-top:23px}.cover-copy{font-size:11px}.cover-date{font-size:13px}.flower-cover{width:180px;right:-25px}.floral-cover{width:110px}.letter-page,.travel-page,.music-page,.songs-page,.film-page,.ps-left,.ps-right,.final-right,.camera-page,.collage-page,.photo-wall-left,.photo-wall-right{padding:20px 17px}.letter-page h2{font-size:29px}.letter-text{font-size:11px;line-height:1.45}.signature,.scribble,.hand-note,.music-note,.film-copy{font-size:13px}.doodle-word{font-size:14px}.photo-polaroid{padding:6px 6px 22px}.photo-polaroid span{font-size:10px}.photo-cluster .photo-polaroid{width:95px;height:120px}.photo-cluster .photo-polaroid img{height:96px}.photo-cluster .photo-polaroid:nth-child(3){left:40px;width:90px;height:115px}.photo-cluster .photo-polaroid:nth-child(3) img{height:90px}.photo-cluster .photo-polaroid:nth-child(4){right:18px;width:100px;height:125px}.photo-cluster .photo-polaroid:nth-child(4) img{height:100px}.note-card{font-size:12px;padding:10px;width:72%}.note-1{left:18px;top:155px}.note-2{right:18px;top:220px}.note-3{left:28px;bottom:34px}.camera-art{width:130px;top:25px;right:-15px}.camera-caption{left:18px;top:130px;font-size:13px}.photo-mini-grid{left:18px;right:18px;bottom:25px;gap:5px}.photo-slot.mini{height:62px}.wall-title,.editorial-title,.travel-title,.music-title,.film-page h2{font-size:29px}.eiffel{width:95px}.postcard-text{font-size:13px;max-width:190px}.vinyl-record{width:85px;height:85px;margin-bottom:12px}.record-label{width:30px;height:30px;font-size:4px;padding-top:6px}.song{font-size:11px}.film-gallery{padding:25px 18px;gap:8px}.film-frame{min-height:95px;padding:4px}.film-frame span{font-size:5px}.ps-big{font-size:40px}.ps-arrow{font-size:45px;right:25px}.secret-note{inset:18px;padding:25px 18px}.secret-note p{font-size:14px}.final-right h2{font-size:29px}.final-photo{height:95px;font-size:12px}.final-line{font-size:12px}.final-word{font-size:58px}.controls{gap:10px;margin-top:14px}.progress{width:150px}.hint{font-size:7px}}
+/*# sourceMappingURL=style.css.map --------------------------------------------*/
+
+/* =====================================
+   A THOUSAND WISHES — MEADOW SECTION
+===================================== */
+
+.meadow-embed-section {
+  position: relative;
+  width: 100%;
+  margin: 70px 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.meadow-embed-frame {
+  display: block;
+  width: 100%;
+  height: 850px;
+  border: none;
+  background: #000;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .meadow-embed-section {
+    margin: 40px 0;
+  }
+
+  .meadow-embed-frame {
+    height: 780px;
+  }
+}
+```css
+/* Seamless connection between the last section and footer */
+.birthday-footer {
+  margin: 0 !important;
+  margin-top: 0 !important;
+  border-top: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 65px 24px 38px;
+  min-height: 360px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  text-align: center;
+  color: #eee1d5;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(143, 68, 83, 0.20),
+      transparent 65%
+    ),
+    linear-gradient(180deg, #352320 0%, #291918 100%);
+}
+
+/* Wedding-style heading */
+.footer-message {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto 18px;
+  color: #f3e7dd;
+}
+
+.footer-message em {
+  font-family: "Italianno", cursive;
+  font-size: 1.55em;
+  font-weight: 400;
+  font-style: normal;
+  color: #c16d80;
+  display: inline-block;
+  transform: rotate(-5deg);
+}
+
+.birthday-signoff {
+  display: inline-block;
+  margin-top: 5px;
+  font-family: "Mrs Saint Delafield", "Great Vibes", cursive;
+  font-size: clamp(42px, 6vw, 64px);
+  line-height: 1.4;
+  color: #c47b89;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196, 123, 137, 0.4);
+  padding: 0 8px 5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.birthday-signoff:hover {
+  color: #edb5bf;
+  text-shadow: 0 0 18px rgba(196, 123, 137, 0.3);
+}
+
+/* Soft ornamental divider */
+.footer-ornament {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 0 auto 20px;
+  color: #bb7784;
+}
+
+.footer-ornament span:not(.ornament-star) {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(196, 123, 137, 0.75)
+  );
+}
+
+.footer-ornament span:last-child {
+  transform: rotate(180deg);
+}
+
+/* More breathing room below the greeting */
+.footer-bottom {
+  margin-top: 30px;
+  color: #b29a90;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* Remove spacing from the section immediately above */
+.birthday-footer,
+.birthday-footer * {
+  box-sizing: border-box;
+}
+
+.birthday-footer::after {
+  inset: 10px;
+  border-color: rgba(235, 205, 187, 0.06);
+  pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .birthday-footer {
+    min-height: 320px;
+    padding: 52px 20px 32px;
+  }
+
+  .footer-message {
+    font-size: 29px;
+    line-height: 1.45;
+  }
+
+  .birthday-signoff {
+    font-size: 34px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+```
